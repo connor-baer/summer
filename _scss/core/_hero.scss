@@ -1,0 +1,64 @@
+// ==== HERO ==== //
+
+// Style the hero section here.
+
+.hero {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  @include mappy-query(tablet) {
+    margin-top: 6rem;
+  }
+}
+
+.hero-title {
+  @include font(title);
+
+  margin-bottom: 1rem;
+}
+
+.hero-icon {
+  margin-right: 1rem;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition: fill $short;
+    fill: palette(gray);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: palette($primary);
+  }
+}
+
+.hero-image {
+  width: 100%;
+  margin-top: 4rem;
+  padding-bottom: 56.25%;
+  background: 50% 50% / cover;
+
+  @include mappy-query(tablet) {
+    margin-top: 6rem;
+  }
+}
+
+.hero-svg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 24rem;
+  max-width: 80%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+.hero-text {
+  font-family: $sans;
+  font-size: 56px;
+  font-weight: $sans-bold;
+}

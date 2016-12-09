@@ -1,25 +1,38 @@
 ---
 layout: default
+font: macro
 ---
 
-<article class="post">
-  <a name="{{ page.title }}"><h1 class="post-title">{{ page.title }}</h1></a>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-  {{ content }}
+<article class="content post">
+  <header class="hero">
+    <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
+    {% include core/date.html %}
+    {% if page.image %}
+      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+    {% endif %}
+  </header>
+
+  <div class="content-style">
+
+    {{ content }}
+
+    {% include core/share.html %}
+
+  </div>
 </article>
 
 {% if site.related_posts != empty %}
-<aside class="related">
-  <h3>Related posts</h3>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+<aside class="content-related">
+  <div class="related-container">
+    <h3>Related Posts</h3>
+    <div class="related-posts">
+      {% for page in site.related_posts limit:3 %}
+        <section class="related-post">
+          <h4><a href="{{ site.baseurl }}{{ page.url }}" aria-label="{{ page.title }}">{{ page.title }}</a></h4>
+          {% include core/date.html %}
+        </section>
+      {% endfor %}
+    </div>
+  </div>
 </aside>
 {% endif %}

@@ -1,0 +1,88 @@
+// ==== LAYOUT ==== //
+
+// Define all global layouts and layout styles here.
+
+// 1. Breakpoints
+// 2. Helpers
+// 3. ctnr()
+
+// 1. Breakpoints //
+
+$breakpoints: (x-small: 359px, small: 576px, medium: 769px, large: 1025px, x-large: 1441px);
+
+// You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do.
+$mappy-queries: (
+  phone: mappy-bp(max-width small),
+  tablet: mappy-bp(small),
+  desktop: mappy-bp(medium),
+  desktop-large: mappy-bp(large)
+);
+
+// 2. Helpers //
+
+@mixin clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+// 3. ctnr() //
+
+// Content can take on four different widths: full, three, two and one.
+
+$container-width: 50rem;
+
+@mixin ctnr($width: null) {
+  @if $width == null {
+    @warn "Mixin ctnr() received no input! Please provide a width.";
+  }
+  @else if $width == "full" {
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+    clear: both;
+  }
+  @else if $width == "three" {
+    display: block;
+    width: auto;
+    max-width: calc(100% - 4rem);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mappy-query(desktop) {
+      width: calc(100% - 8rem);
+      max-width: $container-width;
+    }
+  }
+  @else if $width == "two" {
+    @include clearfix;
+
+    display: block;
+    width: 100%;
+
+    @include mappy-query(tablet) {
+      width: 70%;
+      max-width: $container-width * 0.7;
+      padding-left: 2rem;
+      float: right;
+    }
+  }
+  @else if $width == "one" {
+    @include clearfix;
+
+    display: block;
+    width: 100%;
+
+    @include mappy-query(tablet) {
+      width: 30%;
+      max-width: $container-width * 0.3;
+      padding-right: 2rem;
+      float: left;
+    }
+  }
+  @else {
+    @warn "Mixin ctnr() received invalid input! This width does not exist.";
+  }
+}

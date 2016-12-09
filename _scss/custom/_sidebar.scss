@@ -1,0 +1,54 @@
+// ==== SIDEBAR ==== //
+
+// Style the content containers and sidebar content here.
+
+// 1. Containers
+// 2. Sidebar
+
+
+// 1. Containers //
+
+$sidebar-width: 16rem;
+
+.body-wrapper {
+  width: 100%;
+}
+
+@include mappy-query(tablet) {
+  .body-wrapper {
+    padding-right: $sidebar-width;
+  }
+}
+
+@include mappy-query(tablet) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: $sidebar-width;
+  }
+}
+
+
+// 2. Sidebar //
+
+$sidebar-bg: palette($primary);
+$sidebar-overlay: darken($sidebar-bg, 18%);
+
+.sidebar {
+  background-color: $sidebar-bg;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  -webkit-filter: contrast(120%) brightness(110%);
+  filter: contrast(120%) brightness(110%);
+}
+
+.sidecontainer {
+  padding: 1.75rem;
+  background-color: rgba($sidebar-overlay, 0.4);
+  color: palette(gray, lighter);
+  text-shadow: 0 0 0.1em palette(gray, dark);
+  z-index: 88888;
+}

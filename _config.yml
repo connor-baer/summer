@@ -5,60 +5,62 @@ highlighter:          rouge
 
 # Gems
 gems:
-  - jekyll-sitemap
+  - jekyll-feed
   - jekyll-gist
+  - jekyll-redirect-from
+  - jekyll-seo-tag
 
 
 # Settings
-navigation:           true
 headroom:             true
 color:                '#115bb0'
-exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
-sass:
-  sass_dir:           _sass
-  style:              compressed
+exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
+permalink:            /:title/
+compress_html:
+  clippings: all
+  comments: all
 
 
 # Site meta
-title:                Waterford Design
-tagline:              'Branding and design'
-keywords:             'waterford, website, brochure, branding, project, marketing, design, development, coding, perch'
-description:          'Branding and design projects for Waterford Kamhlaba UWCSA.'
-image:                /assets/main.jpg
-logo:                 /assets/logo.png
-url:                  http://waterford.connorbaer.io
+title:                Skye
+tagline:              'Form follows function'
+description:          'A simple Jekyll theme with a photo sidebar.'
+keywords:             'connor, bär, designer, traveller, code, jekyll, developer, theme'
+url:                  http://skye.connorbaer.io
 baseurl:              ''
-
-## replace analytics key below to enable tracking, leave blank to disable
-google_analytics_key: UA-37412525-4 
+assets:               /assets
+images:               /images/
+image:               main.jpg
+logo:                 /assets/icons/apple-icon-144x144.png
 
 author:
   name:               Connor Bär
+  bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
+  image:              author
   url:                http://connorbaer.io
   email:              hello@connorbaer.io
   twitter:            connor_baer
 
-## outputs the social links in the sidebar, leave url blank to omit a social network, re-arrange to change order
 social:
-  medium:             https://medium.com/@connor_baer
-  github:             https://github.com/connor-baer
   twitter:            https://twitter.com/connor_baer
   instagram:          https://instagram.com/connor_baer
+  github:             https://github.com/connor-baer/skye
+  medium:             https://blog.connorbaer.io
 
-version:              2.0.0
+version:              1.0.0
 
 github:
-  repo:               https://github.com/connor-baer/waterford-design
+  repo:               https://github.com/connor-baer/skye
 
 
-# /* Predefined theme colors */
-# $red: #ac4142;
-# $orange: #d28445;
-# $yellow: #f4bf75;
-# $green: #90a959;
-# $cyan: #75b5aa;
-# $blue: #268bd2;
-# // $blue: #6a9fb5;
-# $brown: #8f5536;
+# Integrations
+typekit:              fcv7rfe
 
-# /* Set your colors here. You can use the predefined colors from above. */
+# google_fonts:
+#   name:             weights
+
+# google_analytics_key: UA-37412525-4
+# google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
+
+facebook:
+  app_id:             169140053203395

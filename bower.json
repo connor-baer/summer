@@ -1,0 +1,36 @@
+{
+  "name": "skye",
+  "description": "A simple Jekyll theme with a photo sidebar.",
+  "main": "index.html",
+  "authors": [
+    "Connor Bär"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "connor",
+    "bär",
+    "designer",
+    "traveller",
+    "code",
+    "jekyll",
+    "developer",
+    "theme"
+  ],
+  "homepage": "http://skye.connorbaer.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "typi": "^2.3.0",
+    "modular-scale": "^2.1.3",
+    "mappy-breakpoints": "^0.2.3",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.1.4",
+    "headroom.js": "https://npmcdn.com/headroom.js/bower.zip",
+    "normalize-css": "^4.1.1"
+  }
+}

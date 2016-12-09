@@ -1,0 +1,67 @@
+// ==== SECTION ==== //
+
+// Style the homepage sections here.
+
+// 1. General
+// 2. Creating
+// 3. Writing
+
+// 1. General //
+
+.section {
+  @include clearfix;
+
+  margin-top: 4rem;
+
+  @include mappy-query(tablet) {
+    margin-top: 6rem;
+  }
+
+  > article {
+    @include ctnr(two);
+
+    > *:first-child {
+      margin-top: .5rem;
+    }
+  }
+}
+
+.section-title {
+  @include ctnr(one);
+
+  @include font(header1);
+
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  @include font(header2);
+
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: .25rem;
+}
+
+.section-body {
+  @include font(body);
+
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  transition: color $short;
+
+  a &:hover,
+  a &:focus {
+    color: palette(gray, dark);
+  }
+}
+
+.section-link {
+  @include underline();
+
+  font-weight: $sans-semibold;
+  cursor: pointer;
+
+  &::after {
+    content: " →";
+  }
+}

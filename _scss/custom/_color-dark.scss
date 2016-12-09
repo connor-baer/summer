@@ -1,0 +1,130 @@
+// ==== COLORS ==== //
+
+// Set all colors related things here.
+
+// 1. Base colors
+// 2. Color transformations
+// 3. palette()
+
+// 1. Base colors
+
+$primary: red;
+$secondary: orange;
+
+$black: #fff;
+$white: $oc-gray-9;
+
+// 2. Color transformations //
+
+// Sass map for the color palette; see `_library.scss` for the palette() function.
+$_palettes: (
+  black: (
+    base: $black,
+    light: $black,
+    dark: $black
+  ),
+  white: (
+    base: $white,
+    light: $white,
+    dark: $white
+  ),
+  gray: (
+  lighter: $oc-gray-8,
+  light:   $oc-gray-6,
+  base:    $oc-gray-3,
+  dark:    $oc-gray-1,
+  darker:  $oc-gray-0
+  ),
+  red: (
+    lighter: $oc-red-2,
+    light:   $oc-red-4,
+    base:    $oc-red-6,
+    dark:    $oc-red-8,
+    darker:  $oc-red-9
+  ),
+  pink: (
+    lighter: $oc-pink-2,
+    light:   $oc-pink-4,
+    base:    $oc-pink-6,
+    dark:    $oc-pink-8,
+    darker:  $oc-pink-9
+  ),
+  grape: (
+    lighter: $oc-grape-2,
+    light:   $oc-grape-4,
+    base:    $oc-grape-6,
+    dark:    $oc-grape-8,
+    darker:  $oc-grape-9
+  ),
+  violet: (
+    lighter: $oc-violet-2,
+    light:   $oc-violet-4,
+    base:    $oc-violet-6,
+    dark:    $oc-violet-8,
+    darker:  $oc-violet-9
+  ),
+  indigo: (
+    lighter: $oc-indigo-2,
+    light:   $oc-indigo-4,
+    base:    $oc-indigo-6,
+    dark:    $oc-indigo-8,
+    darker:  $oc-indigo-9
+  ),
+  blue: (
+    lighter: $oc-blue-2,
+    light:   $oc-blue-4,
+    base:    $oc-blue-6,
+    dark:    $oc-blue-8,
+    darker:  $oc-blue-9
+  ),
+  cyan: (
+    lighter: $oc-cyan-2,
+    light:   $oc-cyan-4,
+    base:    $oc-cyan-6,
+    dark:    $oc-cyan-8,
+    darker:  $oc-cyan-9
+  ),
+  teal: (
+    lighter: $oc-teal-2,
+    light:   $oc-teal-4,
+    base:    $oc-teal-6,
+    dark:    $oc-teal-8,
+    darker:  $oc-teal-9
+  ),
+  green: (
+    lighter: $oc-green-2,
+    light:   $oc-green-4,
+    base:    $oc-green-6,
+    dark:    $oc-green-8,
+    darker:  $oc-green-9
+  ),
+  lime: (
+    lighter: $oc-lime-2,
+    light:   $oc-lime-4,
+    base:    $oc-lime-6,
+    dark:    $oc-lime-8,
+    darker:  $oc-lime-9
+  ),
+  yellow: (
+    lighter: $oc-yellow-2,
+    light:   $oc-yellow-4,
+    base:    $oc-yellow-6,
+    dark:    $oc-yellow-8,
+    darker:  $oc-yellow-9
+  ),
+  orange: (
+    lighter: $oc-orange-2,
+    light:   $oc-orange-4,
+    base:    $oc-orange-6,
+    dark:    $oc-orange-8,
+    darker:  $oc-orange-9
+  )
+);
+
+// 3. palette() //
+
+// A simple function to retrieve a color from the palette.
+// Adapted from http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+@function palette($palette, $tone: "base") {
+  @return map-get(map-get($_palettes, $palette), $tone);
+}

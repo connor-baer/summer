@@ -1,0 +1,313 @@
+// ==== CONTENT ==== //
+
+// Style the page and post content here.
+
+// 1. Header
+// 2. Body styles
+// 3. Next post
+// 4. Related posts
+
+// 1. Header //
+
+.content {
+  @include ctnr(three);
+}
+
+.content-header {
+  @include ctnr(two);
+
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.content-icon {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  fill: palette($primary);
+}
+
+// 2. Body styles //
+
+.content-style {
+  @include clearfix;
+
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+
+  h1 {
+    @include font(header1);
+
+    margin-top: 1rem;
+  }
+
+  h2 {
+    @include font(header2);
+  }
+
+  h3 {
+    @include font(header3);
+  }
+
+  h4 {
+    @include font(header3);
+
+    color: palette($primary);
+  }
+
+  p:not(.message) {
+    @include font(body);
+  }
+
+  > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    clear: right;
+  }
+
+  p.message {
+    @include font(app);
+
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  ul,
+  ol {
+    @include font(body);
+
+    padding-left: 1rem;
+  }
+
+  > ol,
+  > ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    clear: right;
+  }
+
+  li > ol,
+  li > ul {
+    padding-bottom: 0;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  blockquote:not(.sidebar) {
+    @include ctnr(full);
+
+    @include font(quote);
+
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  blockquote.sidebar {
+    @include ctnr(one);
+
+    @include font(body);
+
+    position: relative;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    clear: both;
+    color: palette(gray);
+
+    @include mappy-query(phone) {
+      margin-top: 4rem;
+    }
+
+
+    &::before {
+      @include font(quote);
+
+      position: absolute;
+      top: -3rem;
+      color: palette($primary);
+      content: "“";
+    }
+  }
+
+  cite {
+    @include font(app);
+
+    display: block;
+    padding-top: 1rem;
+
+    &::before {
+      content: "— ";
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    // Make sure images are scaled correctly.
+    vertical-align: middle;
+  }
+
+  figure {
+    clear: both;
+
+    &.sidebar {
+      @include ctnr(one);
+
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    &:not(.sidebar) {
+      @include ctnr(full);
+
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+  }
+
+  figcaption {
+    @include font(app);
+
+    margin-top: 1rem;
+  }
+
+  hr {
+    @include ctnr(two);
+  }
+
+  > section {
+    @include ctnr(full);
+  }
+
+  > aside {
+    @include ctnr(one);
+
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid palette(gray, light);
+    border-collapse: collapse;
+    font-size: 85%;
+  }
+
+  td,
+  th {
+    padding: .25rem .5rem;
+    border: 1px solid palette(gray, light);
+  }
+
+  th {
+    text-align: left;
+  }
+
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    background-color: palette(gray, lighter);
+  }
+
+  .share {
+    margin-top: 3rem;
+  }
+}
+
+// 3. Next post //
+
+.content-next {
+  @include ctnr(one);
+
+  display: block;
+  position: relative;
+
+  @include mappy-query(phone) {
+    display: none;
+  }
+}
+
+.next-post {
+  position: absolute;
+  bottom: 1rem;
+  padding-right: 2rem;
+
+  .next-header {
+    @include font(app);
+
+    display: block;
+    margin-bottom: .5rem;
+  }
+}
+
+.next-image {
+  margin: 1rem 0;
+  padding-bottom: 56.25%;
+  background: 50% 50% / cover;
+}
+
+.next-title a {
+  @include font(header3);
+
+  @include underline();
+
+  font-family: $sans;
+  font-weight: $sans-bold;
+}
+
+// 4. Related posts //
+
+.content-related {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: palette(gray, lighter);
+}
+
+.related-container {
+  @include ctnr(three);
+
+  h3 {
+    @include font(header2);
+
+    font-family: $sans;
+    font-weight: $sans-bold;
+  }
+}
+
+.related-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.related-post {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+
+  @include mappy-query(tablet) {
+    width: calc(33.33% - 1.25rem);
+  }
+
+
+  h4 {
+    @include font(header3);
+
+    font-family: $sans;
+    font-weight: $sans-bold;
+
+    a {
+      @include underline(gray, lighter);
+    }
+  }
+}

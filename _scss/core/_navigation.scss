@@ -1,0 +1,117 @@
+// ==== NAVIGATION ==== //
+
+// Style the navigation here.
+
+// 1. General
+// 2. Turbolinks
+// 3. Metabar
+
+// 1. General //
+
+.nav {
+  display: block;
+  list-style: none;
+}
+
+.nav-link {
+  @include font(app);
+
+  a {
+    color: palette(gray);
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+  }
+
+  .nav-active {
+    color: palette(gray, dark);
+    font-weight: $sans-bold;
+  }
+}
+
+// 2. Turbolinks //
+
+.turbolinks-progress-bar {
+  height: 4px;
+  background-color: palette($primary);
+}
+
+// 3. Metabar //
+
+.nav-open,
+.nav-close {
+  display: none;
+
+  @include mappy-query(phone) {
+    @include font(app);
+
+    display: block;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-size: ms(0);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.metabar-nav {
+  @include mappy-query(phone) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    transform: translateY(2rem);
+    transition: transform $long, opacity $long, visibility $long;
+    background-color: transparentize(palette(white), .05);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-close {
+      padding-top: .75rem;
+      float: right;
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: calc(100% - 4rem);
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    .nav-link {
+      @include font(title);
+
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+
+  @include mappy-query(tablet) {
+    .nav {
+      text-align: right;
+    }
+
+    .nav-link {
+      display: inline-block;
+      height: 40px;
+      margin-left: 2rem;
+      padding: 0;
+      vertical-align: bottom;
+    }
+  }
+}
