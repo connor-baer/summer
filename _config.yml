@@ -1,0 +1,64 @@
+# Dependencies
+markdown:             kramdown
+highlighter:          rouge
+
+
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
+
+
+# Settings
+navigation:           true
+headroom:             true
+color:                '#115bb0'
+exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
+sass:
+  sass_dir:           _sass
+  style:              compressed
+
+
+# Site meta
+title:                Waterford Design
+tagline:              'Branding and design'
+keywords:             'waterford, website, brochure, branding, project, marketing, design, development, coding, perch'
+description:          'Branding and design projects for Waterford Kamhlaba UWCSA.'
+image:                /assets/main.jpg
+logo:                 /assets/logo.png
+url:                  http://waterford.connorbaer.io
+baseurl:              ''
+
+## replace analytics key below to enable tracking, leave blank to disable
+google_analytics_key: UA-37412525-4 
+
+author:
+  name:               Connor Bär
+  url:                http://connorbaer.io
+  email:              hello@connorbaer.io
+  twitter:            connor_baer
+
+## outputs the social links in the sidebar, leave url blank to omit a social network, re-arrange to change order
+social:
+  medium:             https://medium.com/@connor_baer
+  github:             https://github.com/connor-baer
+  twitter:            https://twitter.com/connor_baer
+  instagram:          https://instagram.com/connor_baer
+
+version:              2.0.0
+
+github:
+  repo:               https://github.com/connor-baer/waterford-design
+
+
+# /* Predefined theme colors */
+# $red: #ac4142;
+# $orange: #d28445;
+# $yellow: #f4bf75;
+# $green: #90a959;
+# $cyan: #75b5aa;
+# $blue: #268bd2;
+# // $blue: #6a9fb5;
+# $brown: #8f5536;
+
+# /* Set your colors here. You can use the predefined colors from above. */

@@ -1,0 +1,23 @@
+<div id="navigation" {% unless site.headroom == false %}class="headroom"{% endunless %}>
+  <div class="navcontrols">
+    <a id="menu">Menu</a>
+    <a id="close">Close</a>
+  </div>
+  <div class="navbar unstyle">
+    <nav>
+      <ul>
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+              <li><a id="{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        <li><a href="{{ site.github.repo }}">GitHub</a></li>
+        <li><a href="{{ site.github.repo }}/archive/gh-pages.zip">Download</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

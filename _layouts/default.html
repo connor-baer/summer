@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+  	{% unless site.navigation == false %}
+  		{% include navigation.html %}
+    {% endunless %}
+
+    {% include sidebar.html %}
+
+    <div class="content container">
+		{{ content }}
+
+	<footer>The <a href="http://skye.connorbaer.io">Skye</a> theme <a href="https://github.com/connor-baer/skye">v{{ site.version }}</a>. &copy; {{ site.time | date: '%Y' }}. All rights reserved. <a href="{{site.github.repo}}/edit/gh-pages/{{page.path}}">Edit this page</a>.</footer>
+
+    {% include analytics.html %}
+  </body>
+</html>

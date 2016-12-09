@@ -1,0 +1,42 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+//
+//
+//          888                      
+//          888                      
+//          888                      
+//  .d8888b 888  888888  888 .d88b.  
+//  88K     888 .88P888  888d8P  Y8b 
+//  "Y8888b.888888K 888  88888888888 
+//       X88888 "88bY88b 888Y8b.     
+//   88888P'888  888 "Y88888 "Y8888  
+//                       888         
+//                  Y8b d88P         
+//                   "Y88P"
+//
+// Designed, built, and released under MIT license by @mdo. Learn more at
+// https://github.com/poole/poole.
+
+
+$primary: {{ site.color }};
+
+@import url(https://fonts.googleapis.com/css?family=Tinos:400,700|Titillium+Web:400,700);
+@import "variables";
+@import "base";
+@import "type";
+@import "syntax";
+@import "code";
+@import "layout";
+/*@import "masthead";*/
+@import "posts";
+/*@import "pagination";*/
+@import "message";
+
+// Skye files
+@import "skye-base";
+{% unless site.navigation == false %}
+@import "skye-navigation";
+{% endunless %}
