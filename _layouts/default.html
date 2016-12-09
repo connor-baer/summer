@@ -1,20 +1,18 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="en">
+  {% include core/head.html %}
 
-  {% include head.html %}
+  <body class="{% if page.font %}{{ page.font }}{% else %}{{ layout.font }}{% endif %}">
+    {% include custom/sidebar.html %}
 
-  <body>
-  	{% unless site.navigation == false %}
-  		{% include navigation.html %}
-    {% endunless %}
+    <div class="body-wrapper">
+      {% include core/metabar.html %} {{ content }} {% include core/footer.html %}
+    </div>
 
-    {% include sidebar.html %}
-
-    <div class="content container">
-		{{ content }}
-
-	<footer>The <a href="http://skye.connorbaer.io">Skye</a> theme <a href="https://github.com/connor-baer/skye">v{{ site.version }}</a>. &copy; {{ site.time | date: '%Y' }}. All rights reserved. <a href="{{site.github.repo}}/edit/gh-pages/{{page.path}}">Edit this page</a>.</footer>
-
-    {% include analytics.html %}
+    {% include core/scripts.html %}
   </body>
 </html>

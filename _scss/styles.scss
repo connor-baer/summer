@@ -1,0 +1,57 @@
+// Designed, built, and released under MIT license by @connor_baer.
+
+// ==== IMPORTS ==== //
+
+// The order of the imports is crucial since they build on top of each other.
+// For example, a form contains buttons; a menu can contain a form, etc.
+// Note: `bower_components` and `npm_modules` are already in Sass's path.
+
+
+// 1. Helpers //
+
+// Modular scale calculator built into your Sass, from http://www.modularscale.com/.
+@import "modular-scale/stylesheets/modular-scale";
+
+// Typi: a sass mixin to make responsive typography easy, from https://github.com/zellwk/typi.
+@import "typi/scss/typi";
+
+// Mappy Breakpoints: a breakpoint mixin that uses Sass maps, from https://github.com/zellwk/mappy-breakpoints.
+@import "mappy-breakpoints/mappy-breakpoints";
+
+
+// 2. Dependencies //
+
+// Open Color: Color scheme for UI design, from https://github.com/yeun/open-color.
+@import "core/open-color";
+
+// Normalize: make browsers render things more consistently, from https://necolas.github.io/normalize.css/.
+@import "core/normalize";
+
+// Reset: a reset stylesheet to reduce browser inconsistencies, from http://meyerweb.com/eric/tools/css/reset/.
+@import "core/reset";
+
+
+// 3. Authored dependencies //
+
+@import "core/animation";
+@import "core/layout";
+@import "custom/color";
+@import "core/type";
+
+
+// 4. Patters //
+
+@import "core/form";
+@import "core/syntax";
+
+
+// 5. Sections //
+
+@import "core/metabar";
+@import "core/navigation";
+@import "core/hero";
+@import "custom/section";
+@import "custom/content";
+@import "custom/sidebar";
+@import "core/share";
+@import "core/footer";

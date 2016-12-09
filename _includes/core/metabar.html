@@ -1,0 +1,18 @@
+<aside id="metabar" class="metabar">
+	<div class="metabar-wrapper">
+		<div class="metabar-left">
+			<a class="metabar-logo" href="http://madebyconnor.io/{% if site.url == 'http://madebyconnor.io' and page.url == '/' %}#" data-scroll{% else %}" target="_blank" rel="noopener noreferrer"{% endif %} aria-label="Visit 'Made by Connor.'" title="Visit 'Made by Connor.'">
+				{% include custom/logo.html %}
+			</a>
+			<span class="metabar-spacer"></span>
+			<a class="metabar-title" href="{{ site.url }}{{ site.baseurl }}{% if page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Visit the homepage." title="Visit the homepage.">{{ site.title }}</a>
+		</div>
+		<div class="metabar-right">
+			<button id="js-navOpen" class="nav-open">Menu</button>
+			<nav id="js-metabarNav" class="metabar-nav">
+				<button id="js-navClose" class="nav-close">Close</button>
+				{% include core/navigation.html %}
+			</nav>
+		</div>
+	</div>
+</aside>

@@ -1,0 +1,87 @@
+// ==== METABAR ==== //
+
+// Style the metabar here.
+
+// 1. Container
+// 2. Elements
+
+// 1. Container //
+
+.metabar {
+  @include ctnr(full);
+
+  background-color: transparent;
+  box-shadow: 0 0 1px 0 transparent;
+
+  // Light theme
+  &.-light {
+    .metabar-logo svg {
+      fill: palette(white);
+    }
+  }
+}
+
+.metabar-wrapper {
+  @include clearfix;
+
+  @include ctnr(three);
+
+  padding-top: 40px;
+
+  @include mappy-query(desktop) {
+    padding-top: 60px;
+  }
+}
+
+// 2. Elements //
+
+.metabar-left {
+  float: left;
+  line-height: 1;
+}
+
+.metabar-right {
+  float: right;
+}
+
+.metabar-logo {
+  display: inline-block;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    transition: fill $short, transform $short;
+    vertical-align: middle;
+    fill: palette(gray, darker);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      fill: palette(red);
+    }
+  }
+}
+
+.metabar-spacer {
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  margin-right: 11px;
+  margin-left: 13px;
+  background-color: palette(gray, light);
+  vertical-align: middle;
+}
+
+.metabar-title {
+  transition: color $short;
+  color: palette(gray, darker);
+  font-family: $sans;
+  font-size: 25px;
+  font-weight: $sans-bold;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    color: palette($primary);
+  }
+}

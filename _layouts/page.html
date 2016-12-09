@@ -1,8 +1,19 @@
 ---
 layout: default
+font: macro
 ---
 
-<article class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
+<article class="content page">
+  <header class="hero">
+    <h1 class="hero-title">{% if page.description %}{{ page.description }}{% else %}{{ page.title }}{% endif %}</h1>
+    {% if page.image %}
+      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+    {% endif %}
+  </header>
+
+  <div class="content-style">
+    {{ content }}
+
+    {% include core/share.html %}
+  </div>
 </article>

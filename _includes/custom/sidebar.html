@@ -1,0 +1,35 @@
+<div class="sidebar" style="background-image: url({{site.baseurl}}{{site.assets}}{{site.images}}{% if page.image %}{{page.image}}{% endif %}{% if site.image %}{{site.image}}{% endif %});">
+  <div class="sidecontainer">
+    {% if site.logo %}
+    <div class="sidebar-logo">
+      <a href="http://connorbaer.io/"><div class="logo" style="background-image: url({{site.baseurl}}{{site.logo}});
+"></div></a>
+    </div>
+    {% endif %}
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        <h1>
+          <a href="{{ site.url }}">
+            {{ site.title }}
+          </a>
+        </h1>
+        <p class="lead">{{ site.description }}</p>
+      </div>
+      <div id="social" class="unstyle">
+        <ul>
+          {% comment %}
+            The code below dynamically generates a links to your social media
+            profiles that you have specified in the config file. See readme for usage.
+          {% endcomment %}
+
+          {% for s in site.social %}
+            <li>
+              <a href="{{ s[1] }}">{{s[0]}}</a>
+            </li>
+            <li class="social-separator">|</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Enable responsiveness on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Link to page translations -->
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %} {% for post in posts %}
+  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" /> {% endfor %} {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %} {% for page in pages %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
+
+  <!-- Prefetch the pages in the navigation menu -->
+  {% assign entries = site.pages | where: "lang", page.lang | sort: "order" %}
+  {% for entry in entries %}
+  {% unless entry.exclude == true %}
+  <link rel="prefetch" href="{{ site.baseurl }}{{ entry.url }}">
+  {% endunless %}
+  {% endfor %}
+
+  <title>
+    {% if page.title %} {{ page.title }} · {{ site.title }} {% else %} {{ site.title }} · {{ site.tagline }} {% endif %}
+  </title>
+
+  <!-- CSS -->
+  {% if site.google_fonts %}
+    <link href="https://fonts.googleapis.com/css?family={% for font in site.google_fonts %}{{ font[0] | replace: ' ', '+' }}{% if font[1] %}:{% endif %}{{ font[1] | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}" rel="stylesheet">
+  {% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/styles.css">
+
+  {% if site.typekit %}
+  <!-- Typekit -->
+  <script src="https://use.typekit.net/{{ site.typekit }}.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  {% endif %}
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}{{ site.assets }}/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}{{ site.assets }}/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}{{ site.assets }}/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}{{ site.assets }}/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}{{ site.assets }}/icons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="{{ site.color }}">
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}{{ site.assets }}/icons/ms-icon-144x144.png">
+  <link rel="manifest" href="{{ site.baseurl }}{{ site.assets }}/manifest.json">
+  <meta name="theme-color" content="{{ site.color }}">
+  <link rel="shortcut icon" href="{{ site.baseurl }}{{ site.assets }}/icons/favicon.ico">
+
+  <!-- RSS -->
+  {% feed_meta %} {% seo title=false %}
+</head>

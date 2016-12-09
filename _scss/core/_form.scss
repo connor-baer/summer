@@ -1,0 +1,202 @@
+// ==== FORM ==== //
+
+// Style all form components here.
+
+// 1. Buttons
+// 2. Inputs
+// 3. Labels
+// 4. Highlight
+
+// 1. Buttons //
+
+.button {
+  @include font(app);
+
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .25rem 1rem;
+  transition: $short;
+  border: 0;
+  border-radius: .5rem;
+  outline: none;
+  background-color: palette($primary);
+  color: palette(white);
+  font-size: ms(0);
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4px rgba(33, 37, 41, .33);
+  }
+}
+
+// 2. Inputs //
+
+.form-input {
+  @include font(body);
+
+  display: block;
+  width: 100%;
+  padding: .25rem 1rem;
+  transition: background-color $short;
+  border: 1px solid palette(gray);
+  border-radius: .5rem;
+  outline: none;
+  background-color: palette(white);
+  font-family: $sans;
+  resize: none;
+
+  // Active state
+
+  &:focus {
+    border-color: palette($primary);
+    outline: none;
+  }
+
+  // Error state
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    background-color: palette(red, lighter);
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-select {
+  @include font(body);
+
+  display: block;
+  height: 2.5rem;
+  margin: 2rem 0 .25rem;
+  padding: .25rem 1rem;
+  transition: border-color $short, background-color $short;
+  border: 1px solid palette(gray);
+  border-radius: .5rem;
+  outline: none;
+  background-color: palette(gray, lighter);
+  color: palette(gray);
+
+  &:focus,
+  &:active {
+    border-color: palette($primary);
+    background-color: palette($primary, lighter);
+  }
+
+  &:valid {
+    color: palette(gray, darker);
+  }
+}
+
+// 3. Labels //
+
+.form-group {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-error {
+  @include font(app);
+
+  max-height: 0;
+  transition: $short;
+  color: red;
+  overflow: hidden;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+}
+
+.form-label {
+  @include font(body);
+
+  position: absolute;
+  top: calc(.25rem + 1px);
+  left: 1rem;
+  transition: $short;
+  color: palette(gray);
+  font-family: $sans;
+  pointer-events: none;
+}
+
+.form-input {
+  &:focus ~ .form-label,
+  &:valid ~ .form-label {
+    @include font(app);
+
+    top: -1.5rem;
+    left: 0;
+    color: palette($primary);
+    font-size: ms(-1);
+  }
+
+  // Valid state
+
+  &:not(:focus) ~ .form-label {
+    color: palette(gray);
+  }
+
+  // Error state
+
+  &:not(:focus):not(:placeholder-shown):invalid ~ .form-label {
+    color: palette(red);
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid ~ .form-error {
+    max-height: 1.5rem;
+  }
+}
+
+// Separated to help Firefox ignore :placeholder-shown
+.form-input {
+  &:not(:placeholder-shown) ~ .form-label {
+    @include font(app);
+    top: -1.5rem;
+    left: 0;
+    color: palette($primary);
+  }
+
+  &:not(:placeholder-shown):not(:focus) ~ .form-label {
+    color: palette(gray);
+  }
+}
+
+// 4. Highlighter //
+
+.form-highlight {
+  position: absolute;
+  top: .75rem;
+  left: 1rem;
+  width: 33%;
+  height: 1.25rem;
+  opacity: 0.33;
+  pointer-events: none;
+}
+
+// Active state
+
+.form-input:focus ~ .form-highlight {
+  animation: inputHighlighter $long;
+}
+
+// Animations
+
+@keyframes inputHighlighter {
+  from {
+    background: palette($primary, light);
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}

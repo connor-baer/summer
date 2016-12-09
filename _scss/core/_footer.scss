@@ -1,0 +1,76 @@
+// ==== FOOTER ==== //
+
+// Style the footer here.
+
+.footer {
+  @include clearfix;
+
+  margin-top: 4rem;
+  border-top: 2px solid palette(gray, light);
+}
+
+.footer-container {
+  @include ctnr(three);
+}
+
+.footer-logo {
+  @include ctnr(one);
+
+  display: inline-block;
+  margin-top: 2rem;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    transition: fill $short, transform $short;
+    fill: palette(gray, darker);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      fill: palette(red);
+    }
+  }
+}
+
+.footer-navigation {
+  @include ctnr(two);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-title {
+  @include font(header3);
+
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: $sans;
+  font-weight: $sans-bold;
+}
+
+.footer-links {
+  display: block;
+  width: calc(50% - 1rem);
+}
+
+.footer-text {
+  @include ctnr(two);
+
+  @include font(app);
+
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: palette(gray, light);
+
+  a {
+    color: palette(gray, light);
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+  }
+}
