@@ -44,7 +44,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-responsive": "^2.6.0",
     "gulp-ruby-sass": "^2.1.0",
-    "gulp-sass": "^2.3.1",
+    "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-update": "0.0.2",
