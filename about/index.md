@@ -16,9 +16,9 @@ There are currently two official themes built on Poole:
 * [Hyde](http://hyde.getpoole.com)
 * [Lanyon](http://lanyon.getpoole.com)
 
-[Skye](http://skye.connorbaer.io) (this theme) is an adaptation of Hyde, made by [@connor_baer](https://twitter.com/connor_baer).
+[Physalis](http://physalis.connorbaer.io) (this theme) is an adaptation of Hyde, made by [@connor_baer](https://twitter.com/connor_baer).
 
-Learn more and contribute on [GitHub](https://github.com/connor-baer/skye).
+Learn more and contribute on [GitHub](https://github.com/connor-baer/physalis).
 
 ## Setup
 
@@ -29,6 +29,6 @@ Some fun facts about the setup of this project include:
 * Coded with [Sublime Text 3](http://sublimetext.com), an amazing code editor
 * Designed and developed while listening to music like [Ludovico Einaudi](https://open.spotify.com/track/6sVuwzZ4MPsviUE8wfw2n1)
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/connor-baer/skye/issues/new) or [ask me on Twitter](https://twitter.com/connor_baer).
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/connor-baer/physalis/issues/new) or [ask me on Twitter](https://twitter.com/connor_baer).
 
 Thanks for reading!

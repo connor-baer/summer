@@ -1,5 +1,5 @@
 {
-  "name": "skye",
+  "name": "physalis",
   "description": "A simple Jekyll theme with a photo sidebar.",
   "main": "index.html",
   "authors": [
@@ -16,7 +16,7 @@
     "developer",
     "theme"
   ],
-  "homepage": "http://skye.connorbaer.io",
+  "homepage": "http://physalis.connorbaer.io",
   "private": true,
   "ignore": [
     "**/.*",

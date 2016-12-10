@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/connor-baer/skye.svg?branch=gh-pages)](https://travis-ci.org/connor-baer/skye) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0bc2731ef4842d58bf71a7f3ee1a79a)](https://www.codacy.com/app/connor_baer/skye)
+[![Build Status](https://travis-ci.org/connor-baer/physalis.svg?branch=gh-pages)](https://travis-ci.org/connor-baer/physalis) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0bc2731ef4842d58bf71a7f3ee1a79a)](https://www.codacy.com/app/connor_baer/physalis)
 
 # The README Checklist
 

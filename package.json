@@ -1,5 +1,5 @@
 {
-  "name": "skye",
+  "name": "physalis",
   "version": "1.0.0",
   "description": "A simple Jekyll theme with a photo sidebar.",
   "main": "index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor-baer/skye.git"
+    "url": "git+https://github.com/connor-baer/physalis.git"
   },
   "keywords": [
     "connor",
@@ -23,9 +23,9 @@
   "author": "Connor Bär",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/connor-baer/skye/issues"
+    "url": "https://github.com/connor-baer/physalis/issues"
   },
-  "homepage": "http://skye.connorbaer.io",
+  "homepage": "http://physalis.connorbaer.io",
   "dependencies": {
     "open-color": "^1.4.0",
     "turbolinks": "^5.0.0"
