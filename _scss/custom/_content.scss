@@ -179,10 +179,6 @@
     margin-top: 1rem;
   }
 
-  hr {
-    @include ctnr(two);
-  }
-
   > section {
     @include ctnr(full);
   }

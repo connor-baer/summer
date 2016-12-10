@@ -67,7 +67,7 @@
     bottom: 0;
     left: 0;
     padding: 2rem;
-    transform: translateY(2rem);
+    transform: translateY(-2rem);
     transition: transform $long, opacity $long, visibility $long;
     background-color: transparentize(palette(white), .05);
     opacity: 0;

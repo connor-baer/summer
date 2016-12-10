@@ -32,7 +32,7 @@ $mappy-queries: (
 
 // Content can take on four different widths: full, three, two and one.
 
-$container-width: 50rem;
+$container-width: 40rem;
 
 @mixin ctnr($width: null) {
   @if $width == null {

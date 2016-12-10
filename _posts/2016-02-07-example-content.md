@@ -1,6 +1,9 @@
 ---
 layout: post
+lang: en
+ref: example-content
 title: Example content
+image: true
 ---
 
 

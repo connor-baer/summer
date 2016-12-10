@@ -10,22 +10,44 @@
 
 $sidebar-width: 16rem;
 
-.body-wrapper {
-  width: 100%;
-}
-
 @include mappy-query(tablet) {
-  .body-wrapper {
+  .body-wrapper.has-sidebar {
     padding-right: $sidebar-width;
+
+    .hero-image {
+      display: none;
+    }
   }
 }
 
-@include mappy-query(tablet) {
-  .sidebar {
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @include mappy-query(phone) {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(2rem);
+    transition: transform $long, opacity $long, visibility $long;
+    background-color: transparentize(palette(white), .05);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @include mappy-query(tablet) {
     width: $sidebar-width;
   }
 }
@@ -33,22 +55,136 @@ $sidebar-width: 16rem;
 
 // 2. Sidebar //
 
-$sidebar-bg: palette($primary);
-$sidebar-overlay: darken($sidebar-bg, 18%);
+.sidebar-background {
+  display: none;
 
-.sidebar {
-  background-color: $sidebar-bg;
-  background-position: center;
-  background-size: cover;
-  z-index: 1;
-  -webkit-filter: contrast(120%) brightness(110%);
-  filter: contrast(120%) brightness(110%);
+  @include mappy-query(tablet) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: palette($primary);
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
 }
 
-.sidecontainer {
-  padding: 1.75rem;
-  background-color: rgba($sidebar-overlay, 0.4);
-  color: palette(gray, lighter);
-  text-shadow: 0 0 0.1em palette(gray, dark);
+.sidebar-outer {
+  position: relative;
+  height: 100%;
   z-index: 88888;
+
+  @include mappy-query(tablet) {
+    background-color: rgba(palette(gray, darker), 0.25);
+    color: palette(gray, lighter);
+    text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
+  }
+}
+
+.sidebar-inner {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+
+  @include mappy-query(tablet) {
+    bottom: 0;
+  }
+}
+
+.sidebar-close {
+  display: none;
+
+  @include mappy-query(phone) {
+    display: block;
+    height: 40px;
+    padding: 0;
+    float: right;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+
+    svg {
+      fill: palette(gray);
+    }
+  }
+}
+
+.sidebar-open {
+  display: none;
+
+  @include mappy-query(phone) {
+    @include font(app);
+
+    display: block;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    outline: 0;
+    background-color: palette($primary);
+    box-shadow: 0 2px 8px -2px palette(gray);
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: palette(white);
+    }
+  }
+}
+
+.sidebar-headline {
+  @include font(header2);
+
+  display: block;
+  clear: both;
+}
+
+.sidebar-label {
+  color: palette(white);
+  font-weight: $macro-semibold;
+}
+
+.sidebar-label .sidebar-input {
+  display: none;
+}
+
+.sidebar-checkbox {
+  display: inline-block;
+  width: 1.25rem;
+  height: 100%;
+
+  svg {
+    width: 100%;
+    height: 1.25rem;
+    vertical-align: middle;
+
+    @include mappy-query(tablet) {
+      fill: palette(white);
+    }
+  }
+
+  .checked {
+    display: none;
+  }
+
+  .unchecked {
+    display: block;
+  }
+}
+
+.sidebar-input[type=checkbox]:checked + .sidebar-checkbox {
+  .checked {
+    display: block;
+  }
+
+  .unchecked {
+    display: none;
+  }
 }

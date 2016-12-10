@@ -35,12 +35,12 @@
 
 .hero-image {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding-bottom: 56.25%;
   background: 50% 50% / cover;
 
   @include mappy-query(tablet) {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 }
 

@@ -7,9 +7,11 @@ layout: compress
   {% include core/head.html %}
 
   <body class="{% if page.font %}{{ page.font }}{% else %}{{ layout.font }}{% endif %}">
-    {% include custom/sidebar.html %}
+    {% if page.ingredients %}
+      {% include custom/sidebar.html %}
+    {% endif %}
 
-    <div class="body-wrapper">
+    <div class="body-wrapper{% if page.ingredients %} has-sidebar{% endif %}">
       {% include core/metabar.html %} {{ content }} {% include core/footer.html %}
     </div>
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+lang: en
+ref: about
 ---
 
 <p class="message">

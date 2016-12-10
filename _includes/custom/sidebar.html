@@ -1,35 +1,36 @@
-<div class="sidebar" style="background-image: url({{site.baseurl}}{{site.assets}}{{site.images}}{% if page.image %}{{page.image}}{% endif %}{% if site.image %}{{site.image}}{% endif %});">
-  <div class="sidecontainer">
-    {% if site.logo %}
-    <div class="sidebar-logo">
-      <a href="http://connorbaer.io/"><div class="logo" style="background-image: url({{site.baseurl}}{{site.logo}});
-"></div></a>
-    </div>
-    {% endif %}
-    <div class="sidebar-sticky">
-      <div class="sidebar-about">
-        <h1>
-          <a href="{{ site.url }}">
-            {{ site.title }}
-          </a>
-        </h1>
-        <p class="lead">{{ site.description }}</p>
-      </div>
-      <div id="social" class="unstyle">
-        <ul>
-          {% comment %}
-            The code below dynamically generates a links to your social media
-            profiles that you have specified in the config file. See readme for usage.
-          {% endcomment %}
-
-          {% for s in site.social %}
-            <li>
-              <a href="{{ s[1] }}">{{s[0]}}</a>
-            </li>
-            <li class="social-separator">|</li>
-          {% endfor %}
-        </ul>
-      </div>
+<button id="js-sidebarOpen" class="sidebar-open">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+    <path d="M22,18A4,4 0 0,1 18,22H15A4,4 0 0,1 11,18V16H17.79L20.55,11.23L22.11,12.13L19.87,16H22V18M9,22H2C2,19 2,16 2.33,12.83C2.6,10.3 3.08,7.66 3.6,5H3V3H4L7,3H8V5H7.4C7.92,7.66 8.4,10.3 8.67,12.83C9,16 9,19 9,22Z" />
+  </svg>
+</button>
+<div class="sidebar" id="js-sidebar">
+  <div class="sidebar-background" style="background-image: url({{site.baseurl}}{{site.assets}}{{site.images}}{% if page.image %}{{page.ref}}.jpg{% elsif site.image %}{{site.image}}{% endif %});"></div>
+  <div class="sidebar-outer">
+    <div class="sidebar-inner">
+    <button id="js-sidebarClose" class="sidebar-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+      </svg>
+    </button>
+      <h1 class="sidebar-headline">Ingredients</h1>
+      <form class="sidebar-ingredients">
+        {% for i in page.ingredients %}
+          <div class="sidebar-ingredient">
+            <label class="sidebar-label" for="{{ i.name }}">
+              <input class="sidebar-input" id="{{ i.name }}" type="checkbox" name="{{ i.name }}" value="{{ i.name }}">
+              <span class="sidebar-checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path class="unchecked" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                  <path class="checked" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </span>
+              <span class="sidebar-amount">{{ i.amount }}</span>
+              <span class="sidebar-unit">{{ i.unit }} </span>
+              <span class="sidebar-name">{{ i.name }}</span>
+            </label>
+          </div>
+        {% endfor %}
+      </form>
     </div>
   </div>
 </div>

@@ -1,6 +1,18 @@
 ---
 layout: post
+lang: en
+ref: whats-jekyll
 title: What's Jekyll?
+image: true
+ingredients:
+  -
+    name: milk
+    amount: 1
+    unit: L
+  -
+    name: flour
+    amount: 300
+    unit: g
 ---
 
 [Jekyll](http://jekyllrb.com) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/mojombo/jekyll/blob/master/README.markdown):
