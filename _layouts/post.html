@@ -3,13 +3,15 @@ layout: default
 font: serif
 ---
 
-<article class="post{% if page.image %} entry-hasBackground{% endif %}">
+<article class="post{% if page.image or site.image %} entry-hasBackground{% endif %}">
   <div class="content-top">
-    {% if page.image %}
+    {% if page.image or site.image %}
       <div class="hero-background" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-large.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
       <div class="hero-overlay"></div>
+      {% include core/metabar.html color="-white" %}
+    {% else %}
+      {% include core/metabar.html %}
     {% endif %}
-    {% include core/metabar.html color="-white" %}
     <header class="content hero">
       <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
       {% include core/date.html %}

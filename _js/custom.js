@@ -41,7 +41,8 @@ document.addEventListener('turbolinks:load', function () {
 
   var checkCategory = document.getElementsByClassName('js-category');
   var checkDuration = document.getElementsByClassName('js-duration');
-  var checkTags = document.getElementsByClassName('js-tags');
+  var checkMeat = document.getElementsByClassName('js-meat');
+  var checkOrigin = document.getElementsByClassName('js-origin');
 
   var checkBoxes = document.getElementsByClassName('searchbar-checkbox');
 
@@ -49,7 +50,8 @@ document.addEventListener('turbolinks:load', function () {
   function filterList() {
     var checkedCategory = [];
     var checkedDuration = [];
-    var checkedTags = [];
+    var checkedMeat = [];
+    var checkedOrigin = [];
 
     // Put the checked categories into an array.
     for (var m = 0; m < checkCategory.length; ++m) {
@@ -68,14 +70,22 @@ document.addEventListener('turbolinks:load', function () {
     }
 
     // Put the checked tags into an array.
-    for (var o = 0; o < checkTags.length; ++o) {
-      if (checkTags[o].checked) {
-        var valueTags = checkTags[o].value;
-        checkedTags.push(valueTags);
+    for (var o = 0; o < checkMeat.length; ++o) {
+      if (checkMeat[o].checked) {
+        var valueMeat = checkMeat[o].value;
+        checkedMeat.push(valueMeat);
       }
     }
 
-    var checkedLength = checkedCategory.length + checkedDuration.length + checkedTags.length;
+    // Put the checked tags into an array.
+    for (var p = 0; p < checkOrigin.length; ++p) {
+      if (checkOrigin[p].checked) {
+        var valueOrigin = checkOrigin[p].value;
+        checkedOrigin.push(valueOrigin);
+      }
+    }
+
+    var checkedLength = checkedCategory.length + checkedDuration.length + checkedMeat.length + checkedOrigin.length;
 
     if (checkedLength > 0) {
 
@@ -88,11 +98,14 @@ document.addEventListener('turbolinks:load', function () {
         // Check if duration is shorter.
         var duration = checkedDuration.length === 0 || checkedDuration >= item.values().duration;
 
-        // Check if has tag(s).
-        var tags = checkedTags.length === 0 || checkedTags.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0 ;
+        // Check if item has meat.
+        var meat = checkedMeat.length === 0 || checkedMeat.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0 ;
+
+        // Check where item originates.
+        var origin = checkedOrigin.length === 0 || checkedOrigin.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0 ;
 
         // Show the item if it matches the filters.
-        if (category && duration && tags) {
+        if (category && duration && meat && origin) {
           return true;
         }
         return false;

@@ -3,20 +3,28 @@ layout: default
 font: macro
 ---
 
-{% include core/metabar.html %}
-
-<article class="content page">
-  <header class="hero">
-    <h1 class="hero-title">{% if page.description %}{{ page.description }}{% else %}{{ page.title }}{% endif %}</h1>
-    {% if page.image %}
-      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+<article class="post{% if page.image or site.image %} entry-hasBackground{% endif %}">
+  <div class="content-top">
+    {% if page.image or site.image %}
+      <div class="hero-background" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-large.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
+      <div class="hero-overlay"></div>
+      {% include core/metabar.html color="-white" %}
+    {% else %}
+      {% include core/metabar.html %}
     {% endif %}
-  </header>
+    <header class="content hero">
+      <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{% if page.description %}{{ page.description }}{% else %}{{ page.title }}{% endif %}</h1></a>
+    </header>
+  </div>
 
-  <div class="content-style">
-    {{ content }}
+  <div class="content-bottom">
+    <div class="content content-style">
 
-    {% include core/share.html %}
+      {{ content }}
+
+      {% include core/share.html %}
+
+    </div>
   </div>
 </article>
 

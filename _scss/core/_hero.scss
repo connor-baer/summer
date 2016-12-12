@@ -2,11 +2,6 @@
 
 // Style the hero content here.
 
-// 1. Hero
-// 2. Meta
-
-
-// 1. Hero //
 
 .hero {
   padding-top: 4rem;
@@ -67,20 +62,4 @@
   font-family: $sans;
   font-size: 56px;
   font-weight: $sans-bold;
-}
-
-
-// 2. Meta //
-
-.meta {
-  display: block;
-}
-
-.meta-time,
-.meta-date,
-.meta-tags,
-.meta-duration {
-  @include font(app);
-
-  display: inline-block;
 }

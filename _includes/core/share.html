@@ -1,23 +1,23 @@
-<div class="share">
-  <a class="share-icon" href="javascript:window.open('http://twitter.com/share?text={{ page.title | url_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&via={{ site.author.twitter }}', 'Twitter', 'width=600, height=400' )" target="_blank" rel="noopener noreferrer" title="Share '{{ page.title }}' on Twitter." aria-label="Share '{{ page.title }}' on Twitter.">
-    <svg class="share-twitter" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-twitter">
+<div class="meta share">
+  <a href="javascript:window.open('http://twitter.com/share?text={{ page.title | url_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&via={{ site.author.twitter }}', 'Twitter', 'width=600, height=400' )" target="_blank" rel="noopener noreferrer" title="Share '{{ page.title }}' on Twitter." aria-label="Share '{{ page.title }}' on Twitter.">
+    <svg class="meta-svg share-svg share-twitter" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-twitter">
       <title id="aria-twitter">Share '{{ site.title }}' on Twitter.</title>
       <path fill-rule="evenodd" d="M23.998 4.369c-.885.4-1.83.672-2.827.795 1.015-.626 1.797-1.615 2.165-2.793-.951.576-2.006.996-3.128 1.222C19.311 2.613 18.033 2 16.614 2c-2.718 0-4.923 2.258-4.923 5.045 0 .397.045.784.127 1.154-4.091-.213-7.72-2.221-10.149-5.273-.425.743-.665 1.61-.665 2.538 0 1.753.87 3.296 2.19 4.202-.808-.026-1.568-.254-2.231-.63v.06c0 2.446 1.695 4.489 3.95 4.954-.415.113-.85.175-1.298.175-.315 0-.624-.03-.926-.09.627 2.006 2.446 3.466 4.601 3.508-1.686 1.353-3.81 2.159-6.115 2.159-.398 0-.79-.023-1.175-.07C2.18 21.164 4.767 22 7.548 22c9.057 0 14.01-7.69 14.01-14.363 0-.22-.006-.437-.015-.654.96-.712 1.797-1.6 2.457-2.614h-.002z"/>
     </svg>
   </a>
-  <a class="share-icon" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}', 'Facebook', 'width=600, height=400' )" target="_blank" rel="noopener noreferrer" title="Share '{{ page.title }}' on Facebook." aria-label="Share '{{ page.title }}' on Facebook.">
-    <svg class="share-facebook" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-facebook">
+  <a href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}', 'Facebook', 'width=600, height=400' )" target="_blank" rel="noopener noreferrer" title="Share '{{ page.title }}' on Facebook." aria-label="Share '{{ page.title }}' on Facebook.">
+    <svg class="meta-svg share-svg share-facebook" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-facebook">
       <title id="aria-facebook">Share '{{ site.title }}' on Facebook.</title>
       <path fill-rule="evenodd" d="M22.566 0H1.339C.574 0 0 .576 0 1.344v21.312C0 23.424.574 24 1.339 24h11.474v-9.312H9.657V11.04h3.156V8.448c0-3.072 1.912-4.8 4.685-4.8 1.339 0 2.486.096 2.773.096v3.264h-1.912c-1.53 0-1.817.672-1.817 1.728v2.304h3.538l-.478 3.648h-3.06V24h6.12c.764 0 1.338-.576 1.338-1.344V1.344C23.904.576 23.33 0 22.566 0z"/>
     </svg>
   </a>
   {% if page.medium %}
-  <a class="share-icon" href="{{ site.social.medium }}/{{ page.medium }}" target="_blank" rel="noopener noreferrer" title="Read '{{ page.title }}' on Medium." aria-label="Read '{{ page.title }}' on Medium.">
-    <svg class="share-medium" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-medium">
+  <a href="{{ site.social.medium }}/{{ page.medium }}" target="_blank" rel="noopener noreferrer" title="Read '{{ page.title }}' on Medium." aria-label="Read '{{ page.title }}' on Medium.">
+    <svg class="meta-svg share-svg share-medium" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-medium">
       <title id="aria-medium">Read '{{ site.title }}' on Medium.</title>
       <path fill-rule="evenodd" d="M17.764 18.478l-.415.665 1.199.588 4.122 2.028c.226.112.442.163.628.163.418 0 .702-.262.702-.728V8.508l-6.235 9.97h-.001zm6.153-12.815c-.006-.005 0-.015-.004-.018L16.664 2.08c-.09-.045-.185-.056-.28-.065-.025 0-.046-.015-.072-.015-.276 0-.552.136-.701.375l-.36.577-.752 1.203-2.84 4.553 2.84 4.546.751 1.202.752 1.2.886 1.404 7.076-11.292c.03-.045.015-.089-.03-.119l-.017.014zm-9.42 10.413l-3.725-5.961-.443-.705-.442-.705-.376-.615v7.194l4.988 2.458.751.37.752.369-.752-1.202-.75-1.202-.002-.001zM1.108 2.296l-.22-.107c-.128-.062-.25-.091-.361-.091-.31 0-.526.236-.526.63V17.75c0 .402.3.878.664 1.058l6.227 3.075c.161.088.313.118.451.118.386 0 .658-.296.658-.783V5.74c0-.03-.018-.06-.045-.07L1.109 2.296h-.002z"/>
     </svg>
   </a>
   {% endif %}
-  <span class="share-text">Share me!</span>
+  <span class="meta-text">Share me!</span>
 </div>

@@ -5,10 +5,7 @@ description: 'bla bla'
 image: true
 time: 50
 category: lunch
-tags:
-  - fish
-  - sushi
-  - japanese
+tags: [fish, sushi, asian]
 ingredients:
   -
     name: Sea weed

@@ -66,9 +66,11 @@ $sidebar-width: 16rem;
   @include mappy-query(tablet) {
     position: absolute;
     bottom: 0;
+    max-height: 100%;
     padding: 2rem;
     color: white;
     text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    overflow-y: scroll;
   }
 }
 
