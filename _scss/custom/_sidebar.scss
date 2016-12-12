@@ -10,132 +10,65 @@
 
 $sidebar-width: 16rem;
 
-@include mappy-query(tablet) {
-  .body-wrapper.has-sidebar {
+.recipe-hasSidebar > div {
+  @include mappy-query(tablet) {
     padding-right: $sidebar-width;
-
-    .hero-image {
-      display: none;
-    }
   }
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-
-  @include mappy-query(phone) {
+  @include mappy-query(tablet) {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(2rem);
-    transition: transform $long, opacity $long, visibility $long;
-    background-color: transparentize(palette(white), .05);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-
-    &.open {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  @include mappy-query(tablet) {
     width: $sidebar-width;
+    z-index: 1000;
   }
 }
 
 
 // 2. Sidebar //
 
+.sidebar-background,
+.sidebar-overlay {
+  display: none;
+
+  .recipe & {
+    @include mappy-query(tablet) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
 .sidebar-background {
-  display: none;
-
-  @include mappy-query(tablet) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: palette($primary);
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-  }
+  background-color: palette($primary);
+  z-index: 9;
 }
 
-.sidebar-outer {
-  position: relative;
-  height: 100%;
-  z-index: 88888;
-
-  @include mappy-query(tablet) {
-    background-color: rgba(palette(gray, darker), 0.25);
-    color: palette(gray, lighter);
-    text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
-  }
+.sidebar-overlay {
+  background-color: rgba(0, 0, 0, .25);
+  z-index: 99;
 }
 
-.sidebar-inner {
-  position: absolute;
+.sidebar-wrapper {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 0;
+  z-index: 999;
 
   @include mappy-query(tablet) {
+    position: absolute;
     bottom: 0;
-  }
-}
-
-.sidebar-close {
-  display: none;
-
-  @include mappy-query(phone) {
-    display: block;
-    height: 40px;
-    padding: 0;
-    float: right;
-    border: 0;
-    outline: 0;
-    background-color: transparent;
-
-    svg {
-      fill: palette(gray);
-    }
-  }
-}
-
-.sidebar-open {
-  display: none;
-
-  @include mappy-query(phone) {
-    @include font(app);
-
-    display: block;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    width: 4rem;
-    height: 4rem;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    outline: 0;
-    background-color: palette($primary);
-    box-shadow: 0 2px 8px -2px palette(gray);
-
-    svg {
-      width: 2rem;
-      height: 2rem;
-      fill: palette(white);
-    }
+    padding: 2rem;
+    color: white;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .25);
   }
 }
 
@@ -147,12 +80,11 @@ $sidebar-width: 16rem;
 }
 
 .sidebar-label {
-  color: palette(white);
   font-weight: $macro-semibold;
-}
 
-.sidebar-label .sidebar-input {
-  display: none;
+  .sidebar-input {
+    display: none;
+  }
 }
 
 .sidebar-checkbox {
@@ -164,9 +96,10 @@ $sidebar-width: 16rem;
     width: 100%;
     height: 1.25rem;
     vertical-align: middle;
+    fill: palette(gray, darker);
 
     @include mappy-query(tablet) {
-      fill: palette(white);
+      fill: white;
     }
   }
 

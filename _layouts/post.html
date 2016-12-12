@@ -1,23 +1,59 @@
 ---
 layout: default
-font: macro
+font: serif
 ---
 
-<article class="content post">
-  <header class="hero">
-    <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
-    {% include core/date.html %}
+<article class="post{% if page.image %} entry-hasBackground{% endif %}">
+  <div class="content-top">
     {% if page.image %}
-      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+      <div class="hero-background" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-large.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
+      <div class="hero-overlay"></div>
     {% endif %}
-  </header>
+    {% include core/metabar.html color="-white" %}
+    <header class="content hero">
+      <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
+      {% include core/date.html %}
+    </header>
+  </div>
 
-  <div class="content-style">
+  <div class="content-bottom">
+    <div class="content content-style">
+      <aside class="content-author">
+        {% if page.author %}
+          <a {% if page.author.url %}href="{{ page.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ page.author.url }} on url.">
+            <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.author.image }}-small.jpg')"></div>
+          </a>
+          <div class="author-text">
+            <h4><a {% if page.author.url %}href="{{ page.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ page.author.url }} on url.">{{ page.author.name }}</a></h4>
+            <p>{{ page.author.bio }}</p>
+          </div>
+        {% elsif site.author %}
+          <a {% if site.author.url %}href="{{ site.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer">
+            <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
+          </a>
+          <div class="author-text">
+            <h4><a {% if site.author.url %}href="{{ site.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer">{{ site.author.name }}</a></h4>
+            <p>{{ site.author.bio }}</p>
+          </div>
+        {% endif %}
+      </aside>
 
-    {{ content }}
+      {{ content }}
 
-    {% include core/share.html %}
+      {% include core/share.html %}
 
+      {% if page.next.url %}
+      <aside class="content-next">
+        <article class="next-post">
+          <h4 class="next-header">Next Post</h4>
+          {% if page.next.image %}
+          <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
+          {% endif %}
+          <h5 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h5>
+        </article>
+      </aside>
+      {% endif %}
+    </div>
   </div>
 </article>
 
@@ -36,3 +72,5 @@ font: macro
   </div>
 </aside>
 {% endif %}
+
+{% include core/footer.html %}

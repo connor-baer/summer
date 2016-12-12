@@ -1,0 +1,36 @@
+---
+layout: default
+font: macro
+---
+
+<article class="recipe{% if page.ingredients %} recipe-hasSidebar{% endif %}{% if page.image %} recipe-hasBackground{% endif %}">
+  <div class="content-top">
+    {% if page.image %}
+      <div class="hero-background" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-large.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
+      <div class="hero-overlay"></div>
+    {% endif %}
+
+    {% include core/metabar.html %}
+
+    <header class="content hero">
+      <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
+      {% include custom/meta.html %}
+    </header>
+  </div>
+
+  {% if page.ingredients %}
+    {% include custom/sidebar.html %}
+  {% endif %}
+
+  <div class="content-bottom">
+    <div class="content content-style">
+
+      {{ content }}
+
+      {% include core/share.html %}
+
+    </div>
+
+    {% include core/footer.html %}
+  </div>
+</article>

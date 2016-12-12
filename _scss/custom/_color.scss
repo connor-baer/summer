@@ -2,16 +2,21 @@
 
 // Set all colors related things here.
 
-// 1. Colors
-// 2. palette()
+// 1. Base colors
+// 2. Color transformations
+// 3. palette()
 
-// 1. Colors
 
-$primary: green;
-$secondary: orange;
+// 1. Base colors //
+
+$primary: orange;
+$secondary: indigo;
 
 $black: #000;
 $white: #fff;
+
+
+// 2. Color transformations //
 
 // Sass map for the color palette; see `_library.scss` for the palette() function.
 $_palettes: (
@@ -118,7 +123,8 @@ $_palettes: (
   )
 );
 
-// 2. palette() //
+
+// 3. palette() //
 
 // A simple function to retrieve a color from the palette.
 // Adapted from http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/

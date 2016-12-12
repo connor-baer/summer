@@ -1,0 +1,157 @@
+// ==== PHYSALIS ==== //
+
+// Override theme specific elements here.
+
+// 1. Metabar
+// 2. Hero
+// 3. Content
+
+
+// 1. Metabar //
+
+.recipe-hasBackground {
+  @include mappy-query(phone) {
+    .metabar-logo svg {
+      fill: white;
+    }
+
+    .metabar-title {
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+
+      &:hover,
+      &:focus {
+        color: palette($primary);
+      }
+    }
+
+    .nav-link a {
+      @include mappy-query(tablet) {
+        color: white;
+        text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+
+        &:hover,
+        &:focus {
+          color: palette($primary);
+        }
+      }
+    }
+
+    .nav-open {
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    }
+  }
+}
+
+
+// 2. Hero //
+
+.hero {
+  position: relative;
+}
+
+.hero-background,
+.hero-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+
+  .recipe & {
+    @include mappy-query(tablet) {
+      display: none;
+    }
+  }
+}
+
+.hero-background {
+  background-color: palette($primary);
+  z-index: 9;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, .25);
+  z-index: 99;
+}
+
+.entry-hasBackground {
+  .hero {
+    z-index: 999;
+  }
+
+  .hero-title,
+  .meta-date,
+  .meta-time {
+    color: white;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+  }
+}
+
+.recipe-hasBackground {
+  @include mappy-query(phone) {
+    .hero {
+      z-index: 999;
+    }
+
+    .hero-title,
+    .meta-tags,
+    .meta-duration {
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    }
+
+    .meta-svg {
+      fill: white;
+    }
+  }
+}
+
+.meta-svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: .25rem;
+  vertical-align: middle;
+  fill: palette(gray);
+}
+
+.meta-tags {
+  text-transform: capitalize;
+}
+
+
+// 3. Content //
+
+.recipe .content-style {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ol,
+  > ul,
+  > hr,
+  > div:not(.sidebar):not(.full) {
+    @include mappy-query(tablet) {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      float: none;
+    }
+  }
+
+  > ol,
+  > ul {
+    padding-left: 1rem;
+  }
+}
+
+.content-top {
+  position: relative;
+}

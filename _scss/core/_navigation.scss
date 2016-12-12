@@ -14,9 +14,14 @@
 }
 
 .nav-link {
-  @include font(app);
+  color: palette(gray);
+  font-family: $sans;
+  font-size: ms(-1);
+  font-weight: $sans-semibold;
+  letter-spacing: 0.25px;
 
   a {
+    transition: color $short;
     color: palette(gray);
 
     &:hover,

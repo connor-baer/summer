@@ -1,4 +1,4 @@
-<div class="date">
-	<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
-	{% if page.time %}<span class="time">&#160;&#183;&#160;&#160;{{ page.time }} min read</span>{% endif %}
+<div class="meta">
+	<time class="meta-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+	{% if page.time %}<span class="meta-time">&#160;&#183;&#160;&#160;{{ page.time }} min read</span>{% endif %}
 </div>
