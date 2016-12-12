@@ -1,0 +1,36 @@
+// ==== META ==== //
+
+// Style the meta snippets here.
+
+.meta {
+  display: block;
+}
+
+.meta-text {
+  @include font(app);
+
+  display: inline-block;
+}
+
+.meta-svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: .25rem;
+  vertical-align: middle;
+  fill: palette(gray);
+
+  &.share-svg {
+    margin-right: .5rem;
+    transition: fill $short, transform $short;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      fill: palette($primary);
+    }
+  }
+}
+
+.meta-tags {
+  text-transform: capitalize;
+}

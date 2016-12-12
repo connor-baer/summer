@@ -1,4 +1,16 @@
+{% capture wordsInPost %}
+	{{ page.content | number_of_words }}
+{% endcapture %}
+
+{% capture timeToRead %}
+	{{ wordsInPost | divided_by: 200 }}
+{% endcapture %}
+
+{% if timeToRead == "0" %}
+	{{ assign timeToRead = 1 }}
+{% endif %}
+
 <div class="meta">
-	<time class="meta-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
-	{% if page.time %}<span class="meta-time">&#160;&#183;&#160;&#160;{{ page.time }} min read</span>{% endif %}
+	<time class="meta-text" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+	{% if timeToRead %}<span class="meta-text">&#160;&#183;&#160;&#160;{{ timeToRead }} min read</span>{% endif %}
 </div>

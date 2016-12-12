@@ -30,7 +30,7 @@ url:                  http://physalis.connorbaer.io
 baseurl:              ''
 assets:               /assets
 images:               /images/
-image:               main.jpg
+image:                main-large.jpg
 logo:                 /assets/icons/apple-icon-144x144.png
 
 author:
