@@ -330,12 +330,7 @@ hr {
   box-sizing: border-box;
 }
 
-.date {
-  display: block;
-}
-
-time,
-.time {
+time {
   @include font(app);
 
   display: inline-block;

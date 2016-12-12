@@ -10,13 +10,42 @@
 .metabar {
   @include ctnr(full);
 
+  position: relative;
   background-color: transparent;
   box-shadow: 0 0 1px 0 transparent;
+  z-index: 9999;
 
-  // Light theme
-  &.-light {
+  // Color: white
+  &.-white {
     .metabar-logo svg {
       fill: palette(white);
+    }
+
+    .metabar-title {
+      color: palette(white);
+      text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
+
+      &:hover,
+      &:focus {
+        color: palette($primary);
+      }
+    }
+
+    .nav-link a {
+      @include mappy-query(tablet) {
+        color: palette(white);
+        text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
+
+        &:hover,
+        &:focus {
+          color: palette($primary);
+        }
+      }
+    }
+
+    .nav-open {
+      color: palette(white);
+      text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
     }
   }
 }

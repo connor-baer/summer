@@ -3,6 +3,8 @@ layout: default
 font: macro
 ---
 
+{% include core/metabar.html %}
+
 <article class="content page">
   <header class="hero">
     <h1 class="hero-title">{% if page.description %}{{ page.description }}{% else %}{{ page.title }}{% endif %}</h1>
@@ -17,3 +19,5 @@ font: macro
     {% include core/share.html %}
   </div>
 </article>
+
+{% include core/footer.html %}

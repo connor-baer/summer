@@ -2,66 +2,151 @@
 
 // Style the homepage sections here.
 
-// 1. General
-// 2. Creating
-// 3. Writing
+// 1. Searchbar
+// 2. List
 
-// 1. General //
 
-.section {
-  @include clearfix;
+// 1. Searchbar //
 
-  margin-top: 4rem;
+.searchbar {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
-  @include mappy-query(tablet) {
-    margin-top: 6rem;
-  }
+.searchbar-search {
+  @include font(body);
 
-  > article {
-    @include ctnr(two);
+  display: inline-block;
+  padding: .025rem .75rem 0 1.5rem;
+  transition: border-color $short;
+  border: 2px solid palette(gray);
+  border-radius: .5rem;
+  outline: none;
+  background-color: palette(white);
+  color: palette(gray);
+  font-family: $sans;
+  font-size: ms(-1);
+  resize: none;
 
-    > *:first-child {
-      margin-top: .5rem;
+  // Active state
+
+  &:focus {
+    border-color: palette($primary);
+    outline: none;
+
+    ~ .searchbar-searchIcon {
+      fill: palette($primary);
     }
   }
 }
 
-.section-title {
-  @include ctnr(one);
-
-  @include font(header1);
-
-  margin-bottom: 2rem;
+.searchbar-searchLabel {
+  position: relative;
+  margin-right: .5rem;
 }
 
-.section-header {
-  @include font(header2);
-
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: .25rem;
+.searchbar-searchIcon {
+  position: absolute;
+  top: .33rem;
+  left: .5rem;
+  width: 1rem;
+  height: 1rem;
+  transition: fill $short;
+  fill: palette(gray);
 }
 
-.section-body {
-  @include font(body);
-
-  margin-top: .5rem;
-  margin-bottom: 1rem;
-  transition: color $short;
-
-  a &:hover,
-  a &:focus {
-    color: palette(gray, dark);
-  }
+.searchbar-group {
+  display: inline-block;
+  margin: .5rem;
+  margin-left: 0;
 }
 
-.section-link {
-  @include underline();
+.searchbar-button {
+  @include font(app);
 
-  font-weight: $sans-semibold;
+  display: inline-block;
+  margin: 0;
+  padding: .125rem .75rem;
+  transition: background-color $short;
+  border: 0;
+  border-radius: .5rem;
+  outline: none;
+  background-color: palette(gray);
+  color: palette(white);
+  letter-spacing: 1px;
+  text-decoration: none;
   cursor: pointer;
 
-  &::after {
-    content: " →";
+  &:hover,
+  &:focus {
+    background-color: palette($primary);
   }
+}
+
+.searchbar-checkbox {
+  display: none;
+}
+
+.searchbar-checkbox[type=checkbox]:checked ~ .searchbar-button {
+  background-color: palette($primary);
+}
+
+
+// 2. List //
+
+.list {
+  column-gap: 1rem;
+  column-count: 1;
+
+  @include mappy-bp(small large) {
+    column-count: 2;
+  }
+
+  @include mappy-query(desktop-large) {
+    column-count: 3;
+  }
+}
+
+.list-recipe {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: box-shadow $short;
+  box-shadow: 0 4px 16px rgba(palette(gray), .25);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 25px rgba(palette(gray, dark), .25);
+  }
+}
+
+.list-image {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.list-category {
+  @include font(app);
+
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  padding: 0 .75rem;
+  transform: translateY(50%);
+  border-radius: .5rem;
+  background-color: palette($primary);
+  color: palette(white);
+  text-transform: capitalize;
+}
+
+.list-body {
+  padding: 1.5rem 1rem 1rem;
+}
+
+.list-header {
+  @include font(header3);
 }

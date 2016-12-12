@@ -62,5 +62,26 @@ typekit:              fcv7rfe
 # google_analytics_key: UA-37412525-4
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
-facebook:
-  app_id:             169140053203395
+
+# Content
+excerpt_separator: <!-- Read more -->
+
+collections:
+  recipes:
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      lang: en
+      permalink: /news/:title/
+  - scope:
+      path: ''
+      type: recipes
+    values:
+      layout: recipe
+      lang: en
+      permalink: /:title/

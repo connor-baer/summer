@@ -6,13 +6,15 @@
 // 2. Color transformations
 // 3. palette()
 
-// 1. Base colors
 
-$primary: red;
-$secondary: orange;
+// 1. Base colors //
+
+$primary: orange;
+$secondary: indigo;
 
 $black: #fff;
 $white: $oc-gray-9;
+
 
 // 2. Color transformations //
 
@@ -120,6 +122,7 @@ $_palettes: (
     darker:  $oc-orange-9
   )
 );
+
 
 // 3. palette() //
 

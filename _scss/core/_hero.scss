@@ -1,13 +1,19 @@
 // ==== HERO ==== //
 
-// Style the hero section here.
+// Style the hero content here.
+
+// 1. Hero
+// 2. Meta
+
+
+// 1. Hero //
 
 .hero {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 
   @include mappy-query(tablet) {
-    margin-top: 6rem;
+    padding-top: 6rem;
   }
 }
 
@@ -61,4 +67,20 @@
   font-family: $sans;
   font-size: 56px;
   font-weight: $sans-bold;
+}
+
+
+// 2. Meta //
+
+.meta {
+  display: block;
+}
+
+.meta-time,
+.meta-date,
+.meta-tags,
+.meta-duration {
+  @include font(app);
+
+  display: inline-block;
 }

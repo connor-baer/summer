@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 2px 4px rgba(33, 37, 41, .33);
+    box-shadow: 0 2px 4px rgba(33, 37, 41, .25);
   }
 }
 
@@ -178,7 +178,7 @@ textarea {
   left: 1rem;
   width: 33%;
   height: 1.25rem;
-  opacity: 0.33;
+  opacity: 0.25;
   pointer-events: none;
 }
 
