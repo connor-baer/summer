@@ -23,22 +23,6 @@ document.addEventListener('turbolinks:load', function () {
   // Define the list object.
   recipeList = new List('js-list', searchOptions);
 
-  // Get the search input element.
-  var searchInput = document.getElementById('js-search');
-
-  if (searchInput) {
-
-    // Search when typing.
-    searchInput.addEventListener('keyup', function functionName() {
-
-      // Get the search value.
-      var searchValue = searchInput.value;
-
-      // Fuzzy search the list.
-      recipeList.fuzzySearch.search(searchValue);
-    });
-  }
-
   var checkCategory = document.getElementsByClassName('js-category');
   var checkDuration = document.getElementsByClassName('js-duration');
   var checkMeat = document.getElementsByClassName('js-meat');
@@ -99,15 +83,16 @@ document.addEventListener('turbolinks:load', function () {
         var duration = checkedDuration.length === 0 || checkedDuration >= item.values().duration;
 
         // Check if item has meat.
-        var meat = checkedMeat.length === 0 || checkedMeat.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0 ;
+        var meat = checkedMeat.length === 0 || checkedMeat.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0;
 
         // Check where item originates.
-        var origin = checkedOrigin.length === 0 || checkedOrigin.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0 ;
+        var origin = checkedOrigin.length === 0 || checkedOrigin.filter(function(n) { return item.values().tags.split(', ').indexOf(n) !== -1; }).length > 0;
 
         // Show the item if it matches the filters.
         if (category && duration && meat && origin) {
           return true;
         }
+
         return false;
       });
     } else {
