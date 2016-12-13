@@ -14,6 +14,6 @@ Physalis is by preference a forward-thinking project. In addition to the latest 
 
 ### Download
 
-Physalis is developed on and hosted with GitHub. Head to the <a href="https://github.com/connor-baer/physalis">GitHub repository</a> for downloads, bug reports, and features requests.
+Physalis is developed on and hosted with GitHub. Head to the <a href="https://github.com/madebyconnor/physalis">GitHub repository</a> for downloads, bug reports, and features requests.
 
 Thanks!

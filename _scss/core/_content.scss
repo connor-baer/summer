@@ -74,6 +74,7 @@
   > p,
   > ol,
   > ul,
+  > hr,
   > div:not(.sidebar):not(.full) {
     @include ctnr(two);
   }
@@ -126,8 +127,12 @@
   > ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     clear: right;
+
+    @include mappy-query(tablet) {
+      padding-left: 3rem;
+    }
   }
 
   li > ol,
@@ -219,10 +224,6 @@
     @include font(app);
 
     margin-top: 1rem;
-  }
-
-  hr {
-    @include ctnr(two);
   }
 
   > section {
