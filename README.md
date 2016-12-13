@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/madebyconnor/physalis.svg?branch=gh-pages)](https://travis-ci.org/madebyconnor/physalis) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5869a9200876413f8d8e51b37e0dcfa5)](https://www.codacy.com/app/connor_baer/physalis?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=madebyconnor/physalis&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/madebyconnor/physalis.svg?branch=master)](https://travis-ci.org/madebyconnor/physalis) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5869a9200876413f8d8e51b37e0dcfa5)](https://www.codacy.com/app/connor_baer/physalis?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=madebyconnor/physalis&amp;utm_campaign=Badge_Grade)
 
 # The README Checklist
 
