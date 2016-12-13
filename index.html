@@ -3,6 +3,7 @@ layout: default
 font: macro
 lang: en
 ref: index
+image: true
 exclude: true
 ---
 
@@ -45,8 +46,8 @@ exclude: true
           <input class="searchbar-checkbox js-category" type="checkbox" id="dinner" value="dinner">
           <span class="searchbar-button">Dinner</span>
         </label>
-        <label for="snack">
-          <input class="searchbar-checkbox js-category" type="checkbox" id="snack" value="snack">
+        <label for="snacks">
+          <input class="searchbar-checkbox js-category" type="checkbox" id="snacks" value="snacks">
           <span class="searchbar-button">Snacks</span>
         </label>
       </fieldset>
@@ -87,14 +88,15 @@ exclude: true
     </form>
 
     <ul class="list">
-      {% assign recipes = site.recipes | sort: 'order' | where: "lang", page.lang %}
+      {% assign recipes = site.recipes | where: "lang", page.lang %}
       {% for page in recipes %}
 
       <li class="list-recipe">
         <article>
           <a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">
-            <div class="list-image" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-large.jpg{% elsif site.image %}{{ site.image }}{% endif %});"><h5 class="list-category category">{{ page.category }}</h5></div>
+            <div class="list-image" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-small.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
             <div class="list-body">
+              <span class="list-category category">{{ page.category }}</span>
               <h3 class="list-header title">{{ page.title }}</h3>
               {% include custom/meta.html %}
               <span class="list-ingredients ingredients" data-ingredients="{% for i in page.ingredients %}{{ i.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}"></span>

@@ -1,78 +1,51 @@
 ---
 title: 'Salmon Burger'
 ref: salmon-burger
-description: 'Design and development of a new website for Deutsche Stiftung UWC. Work in progress.'
 image: true
-time: 20
-category: dinner
-tags:
-  - fish
-  - burger
+time: 45
+category: lunch
+tags: [fish, burger]
 ingredients:
   -
-    name: Salmon steak
+    name: salmon, drained and flaked
+    amount: 7.5
+    unit: oz
+  -
+    name: hamburger buns
+    amount: 2
+    unit:
+  -
+    name: celery stalk, finely chopped
+    amount: 1/2
+    unit:
+  -
+    name: shallot, finely chopped
+    amount: 1
+    unit:
+  -
+    name: mayonnaise
+    amount: 1
+    unit: tbsp
+  -
+    name: coarse salt
     amount:
     unit:
   -
-    name: Spinach (leaves)
+    name: ground pepper
     amount:
     unit:
   -
-    name: Wasabi mayonnaise sauce
-    amount:
-    unit:
+    name: olive oil
+    amount: 2
+    unit: tsp
   -
-    name: Onions
-    amount:
-    unit:
-  -
-    name: side of sweet potato fries
-    amount:
-    unit:
+    name: baby spinach
+    amount: 200
+    unit: g
 ---
 
-One important detail to consider when cooking is the amount of flavor you’ll get from a dish in relation to the amount of time you put into it. The best meals are those in which you can minimize effort and maximize deliciousness. Take these tortillas with pulled chicken, for example. Simply pile the ingredients high on a plate, bake them briefly in the oven, and then enjoy a super tasty snack that’s perfect for sharing with friends!
+For a flavorful spread for this easy-to-make burger, mix some mayonnaise with chopped fresh tarragon or minced shallot.
 
-<figure>
-  <img
-	srcset="{{ site.assets }}{{ site.images }}main-large.jpg 2000w, {{ site.assets }}{{ site.images }}main.jpg 1000w, {{ site.assets }}{{ site.images }}main-small.jpg 500w"
-  sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)"
-	src="{{ site.assets }}{{ site.images }}main.jpg"
-	alt="There is so much more to the continent and each country is different.">
-  <figcaption>There is so much more to the continent and each country is different.</figcaption>
-</figure>
-
-1. Lachs steak
-  Spinach (leaves) Lachs steak Spinach (leaves)
-
-<div class="gallery gallery-3">
-  <figure class="gallery-item">
-    <img
-  	srcset="{{ site.assets }}{{ site.images }}introducing-physalis-large.jpg 2000w, {{ site.assets }}{{ site.images }}introducing-physalis.jpg 1000w, {{ site.assets }}{{ site.images }}introducing-physalis-small.jpg 500w"
-    sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)"
-  	src="{{ site.assets }}{{ site.images }}introducing-physalis.jpg"
-  	alt="There is so much more to the continent and each country is different.">
-    <figcaption>There is so much more to the continent and each country is different.</figcaption>
-  </figure>
-  <figure class="gallery-item">
-    <img
-  	srcset="{{ site.assets }}{{ site.images }}introducing-physalis-large.jpg 2000w, {{ site.assets }}{{ site.images }}introducing-physalis.jpg 1000w, {{ site.assets }}{{ site.images }}introducing-physalis-small.jpg 500w"
-    sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)"
-  	src="{{ site.assets }}{{ site.images }}introducing-physalis.jpg"
-  	alt="There is so much more to the continent and each country is different.">
-    <figcaption>There is so much more to the continent and each country is different.</figcaption>
-  </figure>
-  <figure class="gallery-item">
-    <img
-    srcset="{{ site.assets }}{{ site.images }}introducing-physalis-large.jpg 2000w, {{ site.assets }}{{ site.images }}introducing-physalis.jpg 1000w, {{ site.assets }}{{ site.images }}introducing-physalis-small.jpg 500w"
-    sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)"
-    src="{{ site.assets }}{{ site.images }}introducing-physalis.jpg"
-    alt="There is so much more to the continent and each country is different.">
-    <figcaption>There is so much more to the continent and each country is different.</figcaption>
-  </figure>
-</div>
-
-2. Wasabi mayonnaise sauce
-
-Onions
-side of sweet potato fries
+1. In a food processor, pulse 1 bun until fine crumbs form (you should have about 1/4 cup). Transfer breadcrumbs to a large bowl and add salmon, celery, shallot, and mayonnaise. Season with salt and pepper; mix well to combine. Form into a 3/4-inch-thick patty, transfer to a plate, and refrigerate 10 minutes.
+2. In a medium nonstick skillet, heat oil over medium. Add patty and cook, flipping once, until browned and heated through, about 8 minutes.
+3. Meanwhile, split and toast remaining bun. Serve burger on bun with mayonnaise and spinach.

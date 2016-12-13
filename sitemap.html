@@ -15,5 +15,9 @@ permalink: /sitemap.xml
 <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
 {% assign versions=site.pages | where:"ref", page.ref %}{% for version in versions %}<xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{ site.url }}{{ site.baseurl }}{{ version.url }}" />{% endfor %}
 <changefreq>weekly</changefreq>
+</url>{% endif %}{% endfor %}{% for page in site.recipes %}{% if page.id contains "404" %}{% else %}<url>
+<loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+{% assign versions=site.pages | where:"ref", page.ref %}{% for version in versions %}<xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{ site.url }}{{ site.baseurl }}{{ version.url }}" />{% endfor %}
+<changefreq>weekly</changefreq>
 </url>{% endif %}{% endfor %}
 </urlset>

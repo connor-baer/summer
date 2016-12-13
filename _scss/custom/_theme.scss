@@ -17,7 +17,7 @@
 
     .metabar-title {
       color: white;
-      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+      text-shadow: 0 0 3px rgba(0, 0, 0, .33);
 
       &:hover,
       &:focus {
@@ -28,7 +28,7 @@
     .nav-link a {
       @include mappy-query(tablet) {
         color: white;
-        text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+        text-shadow: 0 0 3px rgba(0, 0, 0, .33);
 
         &:hover,
         &:focus {
@@ -39,7 +39,7 @@
 
     .nav-open {
       color: white;
-      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+      text-shadow: 0 0 3px rgba(0, 0, 0, .33);
     }
   }
 }
@@ -75,7 +75,7 @@
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .33);
   z-index: 99;
 }
 
@@ -86,7 +86,7 @@
     .hero-title,
     .meta-text {
       color: white;
-      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+      text-shadow: 0 0 3px rgba(0, 0, 0, .33);
     }
 
     .meta-svg {
@@ -99,16 +99,16 @@
   @include mappy-query(phone) {
     .hero {
       z-index: 999;
-    }
 
-    .hero-title,
-    .meta-text {
-      color: white;
-      text-shadow: 0 0 3px rgba(0, 0, 0, .25);
-    }
+      .hero-title,
+      .meta-text {
+        color: white;
+        text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+      }
 
-    .meta-svg {
-      fill: white;
+      .meta-svg {
+        fill: white;
+      }
     }
   }
 }
@@ -153,8 +153,13 @@
   }
 
   > ol {
+    margin: 0;
     padding-left: 2rem;
     list-style: none;
+
+    &::after {
+      display: none;
+    }
 
     &:first-of-type {
       counter-reset: steps;
@@ -163,6 +168,7 @@
 
     li {
       position: relative;
+      margin-top: 1rem;
       margin-bottom: 1rem;
 
       &::before {
@@ -196,7 +202,7 @@
     color: white;
     font-family: $macro;
     line-height: 1.5;
-    text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    text-shadow: 0 0 3px rgba(0, 0, 0, .33);
   }
 
   .gallery {
@@ -229,7 +235,7 @@
   }
 
   .gallery-3 {
-    @include mappy-query(phone) {
+    @include mappy-bp(max-width medium) {
       .gallery-item:first-child {
         width: 100%;
         margin-bottom: .25rem;
@@ -247,7 +253,7 @@
       }
     }
 
-    @include mappy-query(tablet) {
+    @include mappy-query(desktop) {
       .gallery-item:first-child {
         width: calc(67% - .125rem);
         float: left;

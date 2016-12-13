@@ -196,6 +196,7 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
     font-size: ms(-1);
     font-weight: $sans-semibold;
     letter-spacing: 0.25px;
+    line-height: 1.5;
   }
   @else {
     @warn "Mixin font() received invalid input! This style does not exist.";
