@@ -2,64 +2,52 @@
 
 // Style the homepage sections here.
 
-// 1. Searchbar
-// 2. List
+// 1. Search
+// 2. Filters
+// 3. List
 
 
-// 1. Searchbar //
+// 1. Search //
 
 .searchbar {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.searchbar-search {
-  @include font(body);
+.searchbar-group {
+  display: inline-block;
+  margin: .25rem 1rem .25rem 0;
+}
 
+.searchbar-search {
+  position: relative;
+}
+
+.search {
   display: inline-block;
   width: 18rem;
   max-width: 100%;
   padding: .125rem .75rem .125rem 2rem;
-  transition: border-color $short;
-  border: 2px solid palette(gray);
-  border-radius: .5rem;
-  outline: none;
-  background-color: palette(white);
   color: palette(gray);
   font-family: $sans;
   font-size: ms(-1);
-  resize: none;
-
-  // Active state
-
-  &:focus {
-    border-color: palette($primary);
-    outline: none;
-
-    ~ .searchbar-searchIcon {
-      fill: palette($primary);
-    }
-  }
 }
 
-.searchbar-searchLabel {
-  position: relative;
-}
-
-.searchbar-searchIcon {
-  position: absolute;
+.search-icon {
   top: .33rem;
   left: .75rem;
   width: 1rem;
   height: 1rem;
   transition: fill $short;
-  fill: palette(gray);
 }
 
-.searchbar-group {
-  display: inline-block;
-  margin: .25rem 1rem .25rem 0;
+.search-highlight {
+  top: .25rem;
+  left: 2rem;
 }
+
+
+// 3. Filters
 
 .searchbar-button {
   @include font(app);
@@ -95,7 +83,7 @@
 }
 
 
-// 2. List //
+// 3. List //
 
 .list {
   column-gap: 1rem;
