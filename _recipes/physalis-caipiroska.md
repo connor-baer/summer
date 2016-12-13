@@ -7,7 +7,7 @@ category: drinks
 tags: [cold, fruit, vegetarian, alcohol, cocktail]
 ingredients:
   -
-    name: Smirnoff No. 21® Vodka
+    name: vodka
     amount: 50
     unit: ml
   -
@@ -46,7 +46,7 @@ ingredients:
 
 1. Cut the lime in wedges, take out the white membrane, then cut the physalis in half and place in a glass.
 2. Muddle the lime, physalis with the Elderflower sugar syrup in the glass. With the muddler press down on the lime and physalis to extract flavor and juices.
-3. Fill the glass with ice and top up with Smirnoff No. 21 Vodka. Decorate with a slice of lime and physalis. Cheers!
+3. Fill the glass with ice and top up with vodka. Decorate with a slice of lime and physalis. Cheers!
 
 ---
 
