@@ -13,7 +13,7 @@ gems:
 
 # Settings
 headroom:             true
-color:                '#115bb0'
+color:                '#fd7e14'
 exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
 permalink:            /:title/
 compress_html:
@@ -30,7 +30,7 @@ url:                  http://physalis.connorbaer.io
 baseurl:              ''
 assets:               /assets
 images:               /images/
-image:                main-large.jpg
+image:                index-large.jpg
 logo:                 /assets/icons/apple-icon-144x144.png
 
 author:
@@ -65,6 +65,10 @@ typekit:              fcv7rfe
 
 # Content
 excerpt_separator: <!-- Read more -->
+
+navigation:
+  GitHub: https://github.com/connor-baer/physalis
+  Download: https://github.com/connor-baer/physalis/archive/gh-pages.zip
 
 collections:
   recipes:

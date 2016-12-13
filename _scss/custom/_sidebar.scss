@@ -54,7 +54,7 @@ $sidebar-width: 16rem;
 }
 
 .sidebar-overlay {
-  background-color: rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .33);
   z-index: 99;
 }
 
@@ -69,7 +69,7 @@ $sidebar-width: 16rem;
     max-height: 100%;
     padding: 2rem;
     color: white;
-    text-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    text-shadow: 0 0 3px rgba(0, 0, 0, .33);
     overflow-y: scroll;
   }
 }

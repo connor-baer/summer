@@ -23,7 +23,7 @@
 
     .metabar-title {
       color: palette(white);
-      text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
+      text-shadow: 0 0 3px rgba(palette(gray, darker), .33);
 
       &:hover,
       &:focus {
@@ -34,7 +34,7 @@
     .nav-link a {
       @include mappy-query(tablet) {
         color: palette(white);
-        text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
+        text-shadow: 0 0 3px rgba(palette(gray, darker), .33);
 
         &:hover,
         &:focus {
@@ -45,7 +45,7 @@
 
     .nav-open {
       color: palette(white);
-      text-shadow: 0 0 3px rgba(palette(gray, darker), 0.25);
+      text-shadow: 0 0 3px rgba(palette(gray, darker), .33);
     }
   }
 }

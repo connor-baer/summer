@@ -7,4 +7,9 @@
     </li>
 	{% endunless %}
 {% endfor %}
+{% for entry in site.navigation %}
+  <li class="nav-link">
+    <a href="{{ entry[1] }}" aria-label="{{ entry[0] }}">{{ entry[0] }}</a>
+  </li>
+{% endfor %}
 </ul>

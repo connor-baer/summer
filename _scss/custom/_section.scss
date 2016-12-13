@@ -17,9 +17,9 @@
   @include font(body);
 
   display: inline-block;
-  width: 16rem;
+  width: 18rem;
   max-width: 100%;
-  padding: .025rem .75rem 0 1.5rem;
+  padding: .125rem .75rem .125rem 2rem;
   transition: border-color $short;
   border: 2px solid palette(gray);
   border-radius: .5rem;
@@ -49,7 +49,7 @@
 .searchbar-searchIcon {
   position: absolute;
   top: .33rem;
-  left: .5rem;
+  left: .75rem;
   width: 1rem;
   height: 1rem;
   transition: fill $short;
@@ -58,7 +58,7 @@
 
 .searchbar-group {
   display: inline-block;
-  margin: .25rem .5rem .25rem 0;
+  margin: .25rem 1rem .25rem 0;
 }
 
 .searchbar-button {
@@ -66,7 +66,7 @@
 
   display: inline-block;
   margin: 0;
-  padding: .125rem .75rem;
+  padding: .375rem .75rem;
   transition: background-color $short;
   border: 0;
   border-radius: .5rem;
@@ -113,21 +113,23 @@
 .list-recipe {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   transition: box-shadow $short;
   border-radius: .25rem;
-  box-shadow: 0 4px 16px rgba(palette(gray), .25);
+  box-shadow: 0 4px 16px rgba(palette(gray), .33);
   overflow: hidden;
+
+  // HACK: Fix webkit (i.e. Safari and Chrome) bugs related to multi column layout.
+  -webkit-transform: translate3d(0, 0, 0);
 
   &:hover,
   &:focus {
-    box-shadow: 0 5px 25px rgba(palette(gray, dark), .25);
+    box-shadow: 0 5px 25px rgba(palette(gray, dark), .33);
   }
 }
 
 .list-image {
   display: block;
-  position: relative;
   width: 100%;
   height: 8rem;
   background-position: center;
@@ -138,10 +140,10 @@
   @include font(app);
 
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 1rem;
-  padding: 0 .75rem;
-  transform: translateY(50%);
+  padding: .125rem .75rem;
+  transform: translateY(-50%);
   border-radius: .5rem;
   background-color: palette($primary);
   color: palette(white);
@@ -149,7 +151,8 @@
 }
 
 .list-body {
-  padding: 1.5rem 1rem 1rem;
+  position: relative;
+  padding: 1.25rem 1rem 1rem;
 }
 
 .list-header {
