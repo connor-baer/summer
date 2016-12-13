@@ -21,11 +21,11 @@
 
 // 2. Dependencies //
 
-// Open Color: Color scheme for UI design, from https://github.com/yeun/open-color.
-@import "core/open-color";
-
 // Normalize: make browsers render things more consistently, from https://necolas.github.io/normalize.css/.
 @import "core/normalize";
+
+// Open Color: Color scheme for UI design, from https://github.com/yeun/open-color.
+@import "core/open-color";
 
 // Reset: a reset stylesheet to reduce browser inconsistencies, from http://meyerweb.com/eric/tools/css/reset/.
 @import "core/reset";

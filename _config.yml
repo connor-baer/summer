@@ -12,7 +12,6 @@ gems:
 
 
 # Settings
-headroom:             true
 color:                '#fd7e14'
 exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
 permalink:            /:title/
@@ -26,7 +25,7 @@ title:                Physalis
 tagline:              'Form follows function'
 description:          'A simple Jekyll theme with a photo sidebar.'
 keywords:             'connor, bär, designer, traveller, code, jekyll, developer, theme'
-url:                  http://physalis.connorbaer.io
+url:                  http://physalis.madebyconnor.co
 baseurl:              ''
 assets:               /assets
 images:               /images/
@@ -44,13 +43,13 @@ author:
 social:
   twitter:            https://twitter.com/connor_baer
   instagram:          https://instagram.com/connor_baer
-  github:             https://github.com/connor-baer/physalis
+  github:             https://github.com/madebyconnor/physalis
   medium:             https://blog.connorbaer.io
 
 version:              1.0.0
 
 github:
-  repo:               https://github.com/connor-baer/physalis
+  repo:               https://github.com/madebyconnor/physalis
 
 
 # Integrations
@@ -67,8 +66,8 @@ typekit:              fcv7rfe
 excerpt_separator: <!-- Read more -->
 
 navigation:
-  GitHub: https://github.com/connor-baer/physalis
-  Download: https://github.com/connor-baer/physalis/archive/gh-pages.zip
+  GitHub: https://github.com/madebyconnor/physalis
+  Download: https://github.com/madebyconnor/physalis/archive/gh-pages.zip
 
 collections:
   recipes:

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor-baer/physalis.git"
+    "url": "git+https://github.com/madebyconnor/physalis.git"
   },
   "keywords": [
     "connor",
@@ -23,9 +23,9 @@
   "author": "Connor Bär",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/connor-baer/physalis/issues"
+    "url": "https://github.com/madebyconnor/physalis/issues"
   },
-  "homepage": "http://physalis.connorbaer.io",
+  "homepage": "http://physalis.madebyconnor.co",
   "dependencies": {
     "open-color": "^1.4.0",
     "turbolinks": "^5.0.0"

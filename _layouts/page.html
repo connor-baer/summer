@@ -3,10 +3,10 @@ layout: default
 font: macro
 ---
 
-<article class="post{% if page.image or site.image %} entry-hasBackground{% endif %}">
+<article class="post{% if page.image %} entry-hasBackground{% endif %}">
   <div class="content-top">
-    {% if page.image or site.image %}
-      <div class="hero-background" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-large.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
+    {% if page.image %}
+      <div class="hero-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
       <div class="hero-overlay"></div>
       {% include core/metabar.html color="-white" %}
     {% else %}
