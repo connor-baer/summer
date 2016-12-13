@@ -40,8 +40,8 @@
   display: block;
   width: 100%;
   padding: .25rem 1rem;
-  transition: background-color $short;
-  border: 1px solid palette(gray);
+  transition: border-color $short;
+  border: 2px solid palette(gray);
   border-radius: .5rem;
   outline: none;
   background-color: palette(white);
@@ -53,6 +53,10 @@
   &:focus {
     border-color: palette($primary);
     outline: none;
+
+    ~ .form-icon {
+      fill: palette($primary);
+    }
   }
 
   // Error state
@@ -97,6 +101,15 @@ textarea {
   position: relative;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.form-icon {
+  position: absolute;
+  top: .75rem;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: palette(gray);
 }
 
 .form-error {
