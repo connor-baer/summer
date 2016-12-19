@@ -226,11 +226,11 @@
     margin-top: 1rem;
   }
 
-  > section {
+  section {
     @include ctnr(full);
   }
 
-  > aside {
+  aside {
     @include ctnr(one);
 
     padding-top: 1.5rem;
@@ -265,48 +265,49 @@
 
     margin-top: 3rem;
   }
-}
 
 
-// 3. Next post //
+  // 3. Next post //
 
-.content-next {
-  @include ctnr(one);
-
-  display: block;
-  position: relative;
-
-  @include mappy-query(phone) {
-    display: none;
-  }
-}
-
-.next-post {
-  position: absolute;
-  bottom: 1rem;
-  padding-right: 2rem;
-
-  .next-header {
-    @include font(app);
+  .content-next {
+    @include ctnr(one);
 
     display: block;
-    margin-bottom: .5rem;
+    position: relative;
+    padding: 0;
+
+    @include mappy-query(phone) {
+      display: none;
+    }
   }
-}
 
-.next-image {
-  margin: 1rem 0;
-  padding-bottom: 56.25%;
-  background: 50% 50% / cover;
-}
+  .next-post {
+    position: absolute;
+    bottom: 1rem;
+    padding-right: 2rem;
 
-.next-title a {
-  @include font(header3);
+    .next-header {
+      @include font(app);
 
-  @include underline();
+      display: block;
+      margin-bottom: .5rem;
+    }
+  }
 
-  font-family: $sans;
-  font-weight: $sans-bold;
+  .next-image {
+    margin: 1rem 0;
+    padding-bottom: 56.25%;
+    background: 50% 50% / cover;
+  }
+
+  .next-title a {
+    @include font(header3);
+
+    @include underline();
+
+    font-family: $sans;
+    font-weight: $sans-bold;
+  }
 }
 
 
