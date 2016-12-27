@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "physalis",
+  "description": "A simple Jekyll theme with a photo sidebar.",
+  "icons": {
+    "60": "assets/icons/firefox_app_60x60.png",
+    "128": "assets/icons/firefox_app_128x128.png",
+    "512": "assets/icons/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Connor Bär",
+    "url": null
+  }
+}

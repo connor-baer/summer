@@ -10,7 +10,7 @@ exclude: true
 <div class="index{% if page.image %} entry-hasBackground{% endif %}">
   <div class="content-top">
     {% if page.image %}
-      <div class="hero-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+      <div class="hero-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}-large.jpg') 2x )"></div>
       <div class="hero-overlay"></div>
       {% include core/metabar.html color="-white" %}
     {% else %}
@@ -95,7 +95,7 @@ exclude: true
       <li class="list-recipe">
         <article>
           <a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">
-            <div class="list-image" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}{% if page.image %}{{ page.ref }}-small.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
+            <div class="list-image" style="background-image: url({{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{% if page.image %}{{ page.ref }}-small.jpg{% elsif site.image %}{{ site.image }}{% endif %});"></div>
             <div class="list-body">
               <span class="list-category category">{{ page.category }}</span>
               <h3 class="list-header title">{{ page.title }}</h3>
