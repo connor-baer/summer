@@ -1,10 +1,11 @@
 // ==== SCRIPTS ==== //
 
 var gulp  = require('gulp'),
-  plugins = require('gulp-load-plugins')({ camelize: true }),
-  merge   = require('merge-stream'),
-  config  = require('../../gulpconfig').scripts
+    merge   = require('merge-stream'),
+    plugins = require('gulp-load-plugins')({ camelize: true }),
+    config  = require('../../gulpconfig').scripts
 ;
+
 
 // Check core scripts for errors
 gulp.task('scripts-lint', function() {
@@ -12,6 +13,7 @@ gulp.task('scripts-lint', function() {
   .pipe(plugins.jshint())
   .pipe(plugins.jshint.reporter('default')); // No need to pipe this anywhere
 });
+
 
 // Generate script bundles as defined in the configuration file
 // Adapted from https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-task-steps-per-folder.md
@@ -44,6 +46,7 @@ gulp.task('scripts-bundle', ['scripts-lint'], function(){
   return merge(tasks);
 });
 
+
 // Minify scripts in place
 gulp.task('scripts-minify', ['scripts-bundle'], function(){
   return gulp.src(config.minify.src)
@@ -53,6 +56,7 @@ gulp.task('scripts-minify', ['scripts-bundle'], function(){
   .pipe(gulp.dest(config.minify.dist+config.minify.dest))
   .pipe(gulp.dest(config.minify.dest));
 });
+
 
 // Master script task; lint -> bundle -> minify
 gulp.task('scripts', ['scripts-minify']);

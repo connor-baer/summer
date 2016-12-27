@@ -2,24 +2,42 @@
 /* jshint -W098 */
 /* jshint -W070 */
 
-// ==== CONFIGURATION ==== //
 
-// Project paths
-var src    = '', // The raw material of the theme: custom scripts, SCSS source files, images, etc.; do not delete this folder!
-  dist     = '_site/', // The distribution package that you'll be uploading to your server; delete it anytime.
-  assets   = 'assets/', // A staging area for assets that require processing before landing in the source folder (example: icons before being added to a sprite sheet)
-  bower    = 'bower_components/', // Bower packages
-  modules  = 'node_modules/'; // Npm packages
+// ==== GULP CONFIGURATION ==== //
+
+// 1. Variables
+// 2. BrowserSync
+// 3. Watch
+// 4. Update
+// 5. Clean
+// 6. Styles
+// 7. Scripts
+// 8. Images
+// 9. Icons
+// 10. Jekyll
 
 
-// Project settings
+// 1. Variables //
+
+var pkg  = require('./package.json'), // Allows access to the project metadata from the package.json file.
+  project = pkg.name, // The name of the project, pulled from the package.json.
+  src     = '', // The raw material of the theme: custom scripts, SCSS source files, images, etc.; do not delete this folder!
+  dist    = src + '_site/', // The distribution package that you'll be uploading to your server; delete it anytime.
+  assets  = 'assets/', // A staging area for assets that require processing before landing in the source folder (example: icons before being added to a sprite sheet).
+  bower   = 'bower_components/', // Bower packages.
+  modules = 'node_modules/' // NPM packages.
+;
+
 module.exports = {
+
+
+  // 2. BrowserSync
 
   browsersync: {
     server: {
-      baseDir: src + dist,
+      baseDir: dist,
     },
-    files: [src + dist + '**/*'],
+    files: [dist + '**/*'],
     port: 4000, // Port number for the live version of the site; jekyll default: 4000
     notify: false, // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
     ui: false, // Set to false if you don't need the browsersync UI
@@ -29,6 +47,9 @@ module.exports = {
       debounceDelay: 4000, // This introduces a small delay when watching for file change events to avoid triggering too many reloads
     },
   },
+
+
+  // 3. Watch //
 
   watch: {
     jekyll: [
@@ -41,16 +62,15 @@ module.exports = {
       src + '*.{html,md,yml,yaml,txt}',
       '!' + modules,
       '!' + bower,
-      '!' + src + dist,
+      '!' + dist,
     ],
     styles:  src + '_scss/**/*.scss',
     scripts: src + '_js/*.js',
     images:  src + '_images/**/*',
   },
 
-  clean: {
-    src: [src + dist + assets],
-  },
+
+  // 4. Update  //
 
   update: {
     // Copies dependencies from package managers to `_scss` and renames them to allow for them to be imported as a Sass file.
@@ -65,17 +85,22 @@ module.exports = {
     },
   },
 
-  jekyll: {
-    src:    src,
-    dest:   src + dist,
-    config: '_config.yml',
+
+  // 5. Clean //
+
+  clean: {
+    tidy: [src + '**/.DS_Store'], // A glob pattern matching junk files to clean out of `build`; feel free to add to this array.
+    wipe: [dist + assets], // Clean this out before creating a new distribution copy.
   },
+
+
+  // 6. Styles //
 
   styles: {
     build: {
       src: src + '_scss/**/*.scss',
       dest: assets,
-      dist: src + dist,
+      dist: dist,
     },
     cssnano: {
       autoprefixer: {
@@ -91,6 +116,9 @@ module.exports = {
     },
   },
 
+
+  // 7. Scripts //
+
   scripts: {
     bundles: { // Bundles are defined by a name and an array of chunks (below) to concatenate; warning: this method offers no dependency management!
       scripts: ['navigation', 'search', 'core'],
@@ -101,13 +129,13 @@ module.exports = {
         src + '_js/core.js',
         src + '_js/custom.js',
       ],
-      navigation: [
-        bower + 'smooth-scroll/dist/js/smooth-scroll.js',
-        modules + 'turbolinks/dist/turbolinks.js',
-      ],
       search: [
         bower + 'list.js/dist/list.min.js',
         bower + 'list.fuzzysearch.js/dist/list.fuzzysearch.min.js',
+      ],
+      navigation: [
+        bower + 'smooth-scroll/dist/js/smooth-scroll.js',
+        modules + 'turbolinks/dist/turbolinks.js',
       ],
     },
     dest: assets,// Where the scripts end up in your theme
@@ -118,33 +146,27 @@ module.exports = {
       src: assets + '**/*.js',
       uglify: {}, // Default options
       dest: assets,
-      dist: src + dist,
+      dist: dist,
     },
   },
 
+
+  // 8. Images //
+
   images: {
-    optimize: {
-      src: [src + assets + 'images/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `assets` since we are minifying images in place
-      imagemin: {
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true,
-      },
-      dest: src + assets + 'images/',
-    },
     resize: {
-      src: [src + '_images/**/*(*.png|*.jpg|*.jpeg)'],
+      src: [src + '_images/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'],
       responsive: {
         // Convert all images to JPEG format.
-        '*': [{
-          // image.jpg is 1000 pixels wide.
+        'posts/*': [{
+          // post.jpg is 1000 pixels wide.
           width: 1000,
           withoutEnlargement: false,
           rename: {
             extname: '.jpg',
           },
         }, {
-          // image-large.jpg is 2000 pixels wide.
+          // post-large.jpg is 2000 pixels wide.
           width: 1000 * 2,
           withoutEnlargement: false,
           rename: {
@@ -152,16 +174,65 @@ module.exports = {
             extname: '.jpg',
           },
         }, {
-          // image-small.jpg is 500 pixels wide.
+          // post-small.jpg is 500 pixels wide.
           width: 1000 / 2,
           withoutEnlargement: false,
           rename: {
             suffix: '-small',
             extname: '.jpg',
           },
-        }, ],
+        },],
+      },
+      options: {
+        errorOnUnusedImage: false,
+        silent: true,
       },
       dest: src + assets + 'images/',
     },
+  },
+
+
+  // 9. Icons //
+
+  icons: {
+    src: [src + '_images/icons/*(*.png|*.jpg|*.jpeg)'],
+    favicons: {
+      appName: pkg.name,
+      appDescription: pkg.description,
+      developerName: pkg.author,
+      background: '#f9423a',
+      path: src + assets + 'icons/',
+      url: pkg.homepage,
+      display: 'standalone',
+      orientation: 'portrait',
+      start_url: '/index.html',
+      version: pkg.version,
+      logging: false,
+      online: false,
+      replace: true,
+      html: src + '_includes/core/icons.html',
+      pipeHTML: true,
+      icons: {
+        android: true,              // Create Android homescreen icon. `boolean`
+        appleIcon: true,            // Create Apple touch icons. `boolean` or `{ offset: offsetInPercentage }`
+        appleStartup: false,         // Create Apple startup images. `boolean`
+        coast: { offset: 15 },      // Create Opera Coast icon with offset 25%. `boolean` or `{ offset: offsetInPercentage }`
+        favicons: true,             // Create regular favicons. `boolean`
+        firefox: true,              // Create Firefox OS icons. `boolean` or `{ offset: offsetInPercentage }`
+        windows: true,              // Create Windows 8 tile icons. `boolean`
+        yandex: false,                // Create Yandex browser icon. `boolean`
+      },
+    },
+    destHtml: src,
+    dest: src + assets + 'icons/',
+  },
+
+
+  // 10. Jekyll //
+
+  jekyll: {
+    src:    src,
+    dest:   dist,
+    config: '_config.yml',
   },
 };
