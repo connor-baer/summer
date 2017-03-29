@@ -2,6 +2,8 @@
 
 # The README Checklist
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/madebyconnor/physalis.svg)](https://greenkeeper.io/)
+
 A handy checklist for an efficient README:
 
  - [ ] One-liner explaining the purpose of the module
