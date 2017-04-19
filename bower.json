@@ -1,5 +1,5 @@
 {
-  "name": "physalis",
+  "name": "summer",
   "description": "A simple Jekyll theme with a photo sidebar.",
   "main": "index.html",
   "authors": [
@@ -16,7 +16,7 @@
     "developer",
     "theme"
   ],
-  "homepage": "http://physalis.madebyconnor.co",
+  "homepage": "https://madebyconnor.github.io/summer",
   "private": true,
   "ignore": [
     "**/.*",

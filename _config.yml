@@ -21,12 +21,12 @@ compress_html:
 
 
 # Site meta
-title:                Physalis
+title:                Summer
 tagline:              'Form follows function'
 description:          'A simple Jekyll theme with a photo sidebar.'
 keywords:             'connor, bär, designer, traveller, code, jekyll, developer, theme'
-url:                  http://physalis.madebyconnor.co
-baseurl:              ''
+url:                  https://madebyconnor.github.io
+baseurl:              /summer
 assets:               /assets
 images:               /images/
 image:                index-large.jpg
@@ -36,27 +36,26 @@ author:
   name:               Connor Bär
   bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
   image:              author
-  url:                http://connorbaer.io
-  email:              hello@connorbaer.io
+  url:                https://connorbaer.co
+  email:              hello@connorbaer.co
   twitter:            connor_baer
 
 social:
   twitter:            https://twitter.com/connor_baer
   instagram:          https://instagram.com/connor_baer
-  github:             https://github.com/madebyconnor/physalis
-  medium:             https://blog.connorbaer.io
+  github:             https://github.com/madebyconnor/summer
 
-version:              1.0.0
+version:              2.0.0
 
 github:
-  repo:               https://github.com/madebyconnor/physalis
+  repo:               https://github.com/madebyconnor/summer
 
 
 # Integrations
-typekit:              fcv7rfe
+# typekit:              fcv7rfe
 
-# google_fonts:
-#   name:             weights
+google_fonts:
+  Overpass:           400, 600, 800
 
 # google_analytics_key: UA-37412525-4
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
@@ -66,8 +65,8 @@ typekit:              fcv7rfe
 excerpt_separator: <!-- Read more -->
 
 navigation:
-  GitHub: https://github.com/madebyconnor/physalis
-  Download: https://github.com/madebyconnor/physalis/archive/gh-pages.zip
+  GitHub: https://github.com/madebyconnor/summer
+  Download: https://github.com/madebyconnor/summer/archive/gh-pages.zip
 
 collections:
   recipes:

@@ -1,4 +1,4 @@
-# Travis CI (MIT License) configuration file for http://physalis.madebyconnor.co.
+# Travis CI (MIT License) configuration file for https://madebyconnor.github.io/summer.
 # @link https://travis-ci.org/
 
 # Ditch sudo and use containers.
@@ -60,4 +60,4 @@ script:
 notifications:
     email:
         email:
-            - admin@connorbaer.io
+            - admin@connorbaer.co
