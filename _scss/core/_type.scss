@@ -8,45 +8,43 @@
 
 // 1. Variables //
 
-$sans: "freight-sans-pro", "FreightSans Pro", "PT Sans", Arial, sans-serif;
-$sans-normal: 500;
+$sans: "Overpass", Arial, sans-serif;
+$sans-normal: 400;
 $sans-semibold: 600;
-$sans-bold: 700;
-
-$serif: "freight-text-pro", "FreightText Pro", "Times New Roman", Times, serif;
+$sans-bold: 800;
+$serif: Georgia, serif;
 $serif-normal: 500;
 $serif-semibold: 700;
 $serif-bold: 900;
-
-$macro: "freight-macro-pro", "FreightMacro Pro", "Roboto Slab", Georgia, serif;
-$macro-normal: 500;
+$macro: "Overpass", Arial, sans-serif;
+$macro-normal: 400;
 $macro-semibold: 600;
-$macro-bold: 700;
-
+$macro-bold: 800;
 $code: "Courier New", Courier, monospace;
-
 $ms-base: 1rem;
 $ms-ratio: 1.25;
-
 $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
 
 // 2. underline() //
 
 @mixin underline($bg-color: white, $bg-shade: base, $txt-color: $primary) {
-  $selection-color: palette(blue, lighter);
-
   background-repeat: no-repeat, no-repeat, repeat-x;
-  background-position: 0% 90%, 100% 90%, 0% 90%;
+  background-position: 0 90%, 100% 90%, 0 90%;
   background-size: .05em 1px, .05em 1px, 1px 1px;
+
   color: palette($txt-color);
+
+  $selection-color: palette(blue, lighter);
 
   &:hover,
   &:focus {
     background-image: linear-gradient(palette($bg-color, $bg-shade), palette($bg-color, $bg-shade)), linear-gradient(palette($bg-color, $bg-shade), palette($bg-color, $bg-shade)), linear-gradient(palette($txt-color), palette($txt-color));
+
     text-shadow: .03em 0 palette($bg-color, $bg-shade), -.03em 0 palette($bg-color, $bg-shade), 0 .03em palette($bg-color, $bg-shade), 0 -.03em palette($bg-color, $bg-shade), .06em 0 palette($bg-color, $bg-shade), -.06em 0 palette($bg-color, $bg-shade), .09em 0 palette($bg-color, $bg-shade), -.09em 0 palette($bg-color, $bg-shade), .12em 0 palette($bg-color, $bg-shade), -.12em 0 palette($bg-color, $bg-shade), .15em 0 palette($bg-color, $bg-shade), -.15em 0 palette($bg-color, $bg-shade);
 
     &::selection {
       background: $selection-color;
+
       text-shadow: .03em 0 $selection-color, -.03em 0 $selection-color, 0 .03em $selection-color, 0 -.03em $selection-color, .06em 0 $selection-color, -.06em 0 $selection-color, .09em 0 $selection-color, -.09em 0 $selection-color, .12em 0 $selection-color, -.12em 0 $selection-color, .15em 0 $selection-color, -.15em 0 $selection-color;
     }
 
@@ -73,15 +71,17 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   }
 
   @if $style == null {
-    @warn "Mixin font() received no input! Please provide a style.";
-
     color: red;
+
     font-size: ms(10);
+    @warn "Mixin font() received no input! Please provide a style.";
   }
   @else if $style == "title" {
     color: palette(gray, dark);
+
     font-size: ms(4);
     font-weight: $sans-bold;
+
     line-height: 1.4;
 
     a {
@@ -99,18 +99,27 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   @else if $style == "header1" {
     margin-top: .1rem;
     margin-bottom: .5rem;
+
     clear: right;
+
     font-size: ms(3);
     font-weight: $sans-bold;
+
     line-height: 1.25;
 
     &::after {
       display: block;
+
       width: 2em;
-      height: 0.16em;
+
+      height: .16em;
+
       margin-top: .5rem;
-      border-radius: 0.08em;
+
+      border-radius: .08em;
+
       background-color: palette($primary);
+
       content: "";
     }
 
@@ -124,10 +133,13 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   }
   @else if $style == "header2" {
     display: inline;
+
     margin-top: .5rem;
     margin-bottom: .25rem;
+
     font-size: ms(2);
     font-weight: $sans-bold;
+
     line-height: 1.25;
 
     a {
@@ -144,11 +156,15 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   }
   @else if $style == "header3" {
     display: inline;
+
     margin-top: .5rem;
     margin-bottom: .25rem;
+
     color: palette(gray, dark);
+
     font-size: ms(1);
     font-weight: $sans-bold;
+
     line-height: 1.25;
 
     .serif & {
@@ -174,11 +190,14 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   }
   @else if $style == "quote" {
     color: palette(gray, dark);
+
     font-size: ms(4);
+
     line-height: 1.4;
 
     a {
       background-size: .05em 2px, .05em 2px, 2px 2px;
+
       font-weight: $sans-bold;
     }
 
@@ -192,17 +211,19 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   }
   @else if $style == "app" {
     color: palette(gray);
+
     font-family: $sans;
     font-size: ms(-1);
     font-weight: $sans-semibold;
-    letter-spacing: 0.25px;
+
+    letter-spacing: .25px;
     line-height: 1.5;
   }
   @else {
-    @warn "Mixin font() received invalid input! This style does not exist.";
-
     color: red;
+
     font-size: ms(10);
+    @warn "Mixin font() received invalid input! This style does not exist.";
   }
 }
 
@@ -211,11 +232,11 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
 // Update the foundational and global aspects of the page here.
 
 html {
-  @include typi-base;
-
   background-color: palette(gray, darker);
-  word-wrap: break-word;
+
   box-sizing: border-box;
+  word-wrap: break-word;
+  @include typi-base;
 }
 
 *,
@@ -227,13 +248,18 @@ html {
 
 body {
   min-width: 100vw;
+
   min-height: 100vh;
+
   background-color: palette(white);
+
   color: palette(gray, darker);
+
   font-family: $sans;
   font-weight: $sans-normal;
-  font-feature-settings: "lnum", "salt";
+
   overflow-x: hidden;
+  font-feature-settings: "lnum", "salt";
 
   &.serif {
     font-family: $serif;
@@ -249,12 +275,15 @@ body {
 // Limits width on large screens and centers content.
 .site {
   max-width: 100rem;
+
   margin: 0 auto;
 }
 
 a {
   border: 0;
+
   color: inherit;
+
   text-decoration: none;
 }
 
@@ -289,31 +318,44 @@ pre {
 
 pre {
   max-width: 100%;
+
   margin: 0 0 1.75em;
+
   padding: 1.75em;
+
   border: 1px solid palette(gray, light);
+
   font-size: 1rem;
+
   line-height: 1.3125;
+
   white-space: pre-wrap;
+
   overflow: auto;
+
   word-wrap: break-word;
 }
 
 code {
-  padding: 0.125em 0.25em;
+  padding: .125em .25em;
+
   background-color: palette(gray, light);
 }
 
 abbr,
 acronym {
   border-bottom: 1px dotted palette(gray, light);
+
   cursor: help;
 }
 
 mark {
-  padding: 0.125em 0.25em;
+  padding: .125em .25em;
+
   background: palette(orange, light);
+
   color: #fff;
+
   text-decoration: none;
 }
 
@@ -324,19 +366,24 @@ big {
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
+
   border: 0;
+
   box-sizing: border-box;
 
   &::before {
     display: block;
+
     height: 2px;
+
     background-color: palette(gray, light);
+
     content: "";
   }
 }
 
 time {
-  @include font(app);
-
   display: inline-block;
+
+  @include font(app);
 }

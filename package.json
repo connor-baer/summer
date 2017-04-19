@@ -1,6 +1,6 @@
 {
-  "name": "physalis",
-  "version": "1.0.0",
+  "name": "summer",
+  "version": "2.0.0",
   "description": "A simple Jekyll theme with a photo sidebar.",
   "main": "index.html",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madebyconnor/physalis.git"
+    "url": "git+https://github.com/madebyconnor/summer.git"
   },
   "keywords": [
     "connor",
@@ -23,9 +23,9 @@
   "author": "Connor Bär",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madebyconnor/physalis/issues"
+    "url": "https://github.com/madebyconnor/summer/issues"
   },
-  "homepage": "http://physalis.madebyconnor.co",
+  "homepage": "https://madebyconnor.github.io/summer",
   "dependencies": {
     "open-color": "^1.4.0",
     "turbolinks": "^5.0.0"
@@ -34,11 +34,11 @@
     "browser-sync": "^2.17.6",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-changed": "^1.3.2",
+    "gulp-changed": "^2.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-favicons": "^2.2.7",
-    "gulp-filter": "^4.0.0",
+    "gulp-filter": "^5.0.0",
     "gulp-imagemin": "^3.0.3",
     "gulp-jshint": "^2.0.3",
     "gulp-load-plugins": "^1.2.4",
