@@ -30,6 +30,7 @@
   },
   "homepage": "https://connor-baer.github.io/summer",
   "dependencies": {
+    "list.js": "^1.5.0",
     "mappy-breakpoints": "^0.2.3",
     "modularscale-sass": "^3.0.8",
     "normalize.css": "^6.0.0",
