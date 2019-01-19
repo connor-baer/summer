@@ -1,13 +1,14 @@
 {
-  "name": "physalis",
-  "short_name": "physalis",
+  "name": "summer",
+  "short_name": "summer",
   "description": "A simple Jekyll theme with a photo sidebar.",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/index.html",
-  "background_color": "#f9423a",
+  "background_color": "#ffffff",
+  "theme_color": "#fab005",
   "icons": [
     {
       "src": "assets/icons/android-chrome-36x36.png",

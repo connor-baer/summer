@@ -6,7 +6,7 @@ font: serif
 <article class="post{% if page.image %} entry-hasBackground{% endif %}">
   <div class="content-top">
     {% if page.image %}
-      <div class="hero-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}-large.jpg') 2x )"></div>
+      <div class="hero-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpeg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpeg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}-large.jpeg') 2x )"></div>
       <div class="hero-overlay"></div>
       {% include core/metabar.html color="-white" %}
     {% else %}
@@ -23,7 +23,7 @@ font: serif
       <aside class="content-author">
         {% if page.author %}
           <a {% if page.author.url %}href="{{ page.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ page.author.url }} on url.">
-            <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/authors/{{ page.author.image }}-small.jpg')"></div>
+            <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/authors/{{ page.author.image }}-small.jpeg')"></div>
           </a>
           <div class="author-text">
             <h4><a {% if page.author.url %}href="{{ page.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ page.author.url }} on url.">{{ page.author.name }}</a></h4>
@@ -31,7 +31,7 @@ font: serif
           </div>
         {% elsif site.author %}
           <a {% if site.author.url %}href="{{ site.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer">
-            <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
+            <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpeg')"></div>
           </a>
           <div class="author-text">
             <h4><a {% if site.author.url %}href="{{ site.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer">{{ site.author.name }}</a></h4>
@@ -49,7 +49,7 @@ font: serif
         <article class="next-post">
           <h4 class="next-header">Next Post</h4>
           {% if page.next.image %}
-          <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
+          <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpeg')"></div>
           {% endif %}
           <h5 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h5>
         </article>

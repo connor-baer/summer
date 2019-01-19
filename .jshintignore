@@ -1,9 +1,0 @@
-# Ignore minified files
-assets/
-
-# Ignore built site
-_site/
-
-# Ignore gulp configuration
-gulpconfig.js
-gulpfile.js/

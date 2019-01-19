@@ -10,13 +10,13 @@
 // 1. Helpers //
 
 // Modular scale calculator built into your Sass, from http://www.modularscale.com/.
-@import "modular-scale/stylesheets/modular-scale";
+@import 'modularscale-sass/stylesheets/_modularscale';
 
 // Typi: a sass mixin to make responsive typography easy, from https://github.com/zellwk/typi.
 @import "typi/scss/typi";
 
 // Mappy Breakpoints: a breakpoint mixin that uses Sass maps, from https://github.com/zellwk/mappy-breakpoints.
-@import "mappy-breakpoints/mappy-breakpoints";
+@import 'mappy-breakpoints/_mappy-breakpoints';
 
 
 // 2. Dependencies //

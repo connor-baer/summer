@@ -16,7 +16,6 @@
 
 .searchbar-group {
   display: inline-block;
-
   margin: .25rem 1rem .25rem 0;
 }
 
@@ -26,31 +25,25 @@
 
 .search {
   display: inline-block;
-
   width: 18rem;
   max-width: 100%;
-
   padding: .125rem .75rem .125rem 2rem;
-
   color: palette(gray);
-
   font-family: $sans;
   font-size: ms(-1);
+  line-height: 2;
 }
 
 .search-icon {
-  top: .33rem;
+  top: .1rem;
   left: .75rem;
-
   width: 1rem;
-
   height: 1rem;
-
   transition: fill $short;
 }
 
 .search-highlight {
-  top: .25rem;
+  top: -.1rem;
   left: 2rem;
 }
 
@@ -61,31 +54,22 @@
   @include font(app);
 
   display: inline-block;
-
   margin: 0;
-
-  padding: .375rem .75rem;
-
-  transition: background-color $short;
-
+  padding: .375rem .75rem .275rem;
+  transition: background-color $short, border-color $short, color $short;
   border: 0;
-
   border-radius: .5rem;
-
+  border: 2px solid palette(gray);
   outline: none;
-
-  background-color: palette(gray);
-
-  color: palette(white);
-
+  background-color: $white;
+  color: palette(gray);
   letter-spacing: 1px;
-
   text-decoration: none;
 
   cursor: pointer;
 
   &:hover {
-    background-color: palette($primary);
+    border-color: palette($primary);
   }
 }
 
@@ -98,7 +82,9 @@
 }
 
 .searchbar-checkbox[type=checkbox]:checked ~ .searchbar-button {
+  color: palette(white);
   background-color: palette($primary);
+  border-color: palette($primary);
 }
 
 
@@ -118,19 +104,13 @@
 
 .list-recipe {
   display: inline-block;
-
   width: 100%;
-
   margin-bottom: .5rem;
-
   transition: box-shadow $short;
-
   border-radius: .25rem;
-
   box-shadow: 0 4px 16px rgba(palette(gray), .33);
   overflow: hidden;
   // HACK: Fix webkit (i.e. Safari and Chrome) bugs related to multi column layout.
-
   -webkit-transform: translate3d(0, 0, 0);
 
   &:hover,
@@ -141,11 +121,8 @@
 
 .list-image {
   display: block;
-
   width: 100%;
-
   height: 8rem;
-
   background-position: center;
   background-size: cover;
 }
@@ -156,23 +133,16 @@
   position: absolute;
   top: 0;
   left: 1rem;
-
   padding: .125rem .75rem;
-
   transform: translateY(-50%);
-
   border-radius: .5rem;
-
   background-color: palette($primary);
-
   color: palette(white);
-
   text-transform: capitalize;
 }
 
 .list-body {
   position: relative;
-
   padding: 1.25rem 1rem 1rem;
 }
 
