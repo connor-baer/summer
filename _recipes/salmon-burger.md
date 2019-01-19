@@ -1,45 +1,36 @@
 ---
-title: 'Salmon Burger'
+title: 'Salmon burger'
 ref: salmon-burger
 image: true
 time: 45
 category: lunch
 tags: [fish, burger]
 ingredients:
-  -
-    name: salmon, drained and flaked
+  - name: salmon, drained and flaked
     amount: 7.5
     unit: oz
-  -
-    name: hamburger buns
+  - name: hamburger buns
     amount: 2
     unit:
-  -
-    name: celery stalk, finely chopped
+  - name: celery stalk, finely chopped
     amount: 1/2
     unit:
-  -
-    name: shallot, finely chopped
+  - name: shallot, finely chopped
     amount: 1
     unit:
-  -
-    name: mayonnaise
+  - name: mayonnaise
     amount: 1
     unit: tbsp
-  -
-    name: coarse salt
+  - name: coarse salt
     amount:
     unit:
-  -
-    name: ground pepper
+  - name: ground pepper
     amount:
     unit:
-  -
-    name: olive oil
+  - name: olive oil
     amount: 2
     unit: tsp
-  -
-    name: baby spinach
+  - name: baby spinach
     amount: 200
     unit: g
 ---

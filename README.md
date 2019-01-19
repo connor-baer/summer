@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/connor-baer/summer.svg?branch=master)](https://travis-ci.org/connor-baer/summer) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/27e2b81c38004b4592c78ba82d48cef3)](https://www.codacy.com/app/connor_baer/summer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=connor-baer/summer&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/connor-baer/summer.svg?branch=master)](https://travis-ci.org/connor-baer/summer) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/27e2b81c38004b4592c78ba82d48cef3)](https://www.codacy.com/app/connor_baer/summer?utm_source=github.com&utm_medium=referral&utm_content=connor-baer/summer&utm_campaign=Badge_Grade)
 
-# 🏖️ Summer
+# 🍦 Summer
 
- Summer is a simple [Jekyll](http://jekyllrb.com) theme with a photo sidebar.
+Summer is a simple [Jekyll](http://jekyllrb.com) theme with a photo sidebar.
 
 > ⚠️ This theme should work as-is, but is no longer actively maintained. [Contributions](#contributing) are welcome!
 
