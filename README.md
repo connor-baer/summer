@@ -1,16 +1,37 @@
-[![Build Status](https://travis-ci.org/madebyconnor/summer.svg?branch=master)](https://travis-ci.org/madebyconnor/summer) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5869a9200876413f8d8e51b37e0dcfa5)](https://www.codacy.com/app/connor_baer/physalis?utm_source=github.com&utm_medium=referral&utm_content=madebyconnor/summer&utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/connor-baer/summer.svg?branch=master)](https://travis-ci.org/connor-baer/summer) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/27e2b81c38004b4592c78ba82d48cef3)](https://www.codacy.com/app/connor_baer/summer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=connor-baer/summer&amp;utm_campaign=Badge_Grade)
 
-# The README Checklist
+# 🏖️ Summer
 
-A handy checklist for an efficient README:
+ Summer is a simple [Jekyll](http://jekyllrb.com) theme with a photo sidebar.
 
-- [ ] One-liner explaining the purpose of the module
-- [ ] Necessary background context & links
-- [ ] Potentially unfamiliar terms link to informative sources
-- [ ] Clear, runnable example of usage
-- [ ] Installation instructions
-- [ ] Extensive API documentation
-- [ ] Performs cognitive funneling
-- [ ] Caveats and limitations mentioned up-front
-- [ ] Doesn't rely on images to relay critical information
-- [ ] License
+> ⚠️ This theme should work as-is, but is no longer actively maintained. [Contributions](#contributing) are welcome!
+
+[![Summer screenshot](https://github.com/connor-baer/summer/blob/gh-pages/_images/screenshot.png)](https://connor-baer.github.io/summer)
+
+## Usage
+
+You'll need to have [Jekyll](https://jekyllrb.com/), the `bundler` gem, and [`yarn`](https://yarnpkg.com/) (`npm` also works) installed on our computer. Summer provides a fully furnished Jekyll setup — just clone and install the dependencies:
+
+```bash
+# Ruby gems
+bundle install
+# Node modules
+yarn
+```
+
+Then simply run `yarn start` to start the Jekyll server on port `4000`.
+
+## Options
+
+Summer includes some customizable options, applied via options in the `_config.yml` file. A standout feature is the dark theme.
+Have a look at the [`_config.yml`](_config.yml) file for all available options.
+
+## Contributing
+
+**This theme is no longer actively maintained.** However, I welcome bug fixes and feature request through [pull requests](https://github.com/connor-baer/summer/compare). If you don't feel comfortable making code changes, feel free to [open an issue](https://github.com/connor-baer/summer/issues/new), perhaps somebody else will help out.
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
+
+💛

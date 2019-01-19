@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "name": "physalis",
+  "version": "2.0.0",
+  "name": "summer",
   "description": "A simple Jekyll theme with a photo sidebar.",
   "icons": {
     "60": "assets/icons/firefox_app_60x60.png",

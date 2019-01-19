@@ -1,72 +1,84 @@
 # Dependencies
-markdown:             kramdown
-highlighter:          rouge
-
+markdown: kramdown
+highlighter: rouge
 
 # Gems
-gems:
+plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-redirect-from
   - jekyll-seo-tag
 
-
 # Settings
-color:                '#fd7e14'
-exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
-permalink:            /:title/
+color: '#fab005'
+exclude:
+  [
+    CNAME,
+    README.md,
+    NOTES.md,
+    LICENSE.md,
+    .gitignore,
+    package.json,
+    _js,
+    _scss,
+    _images,
+    gulpfile.js,
+    gulpconfig.js,
+    node_modules,
+    gemfile,
+    Gemfile.lock,
+  ]
+permalink: /:title/
 compress_html:
   clippings: all
   comments: all
-
+dark_theme: false
 
 # Site meta
-title:                Summer
-tagline:              'Form follows function'
-description:          'A simple Jekyll theme with a photo sidebar.'
-keywords:             'connor, bär, designer, traveller, code, jekyll, developer, theme'
-url:                  https://madebyconnor.github.io
-baseurl:              /summer
-assets:               /assets
-images:               /images/
-image:                index-large.jpg
-logo:                 /assets/icons/apple-icon-144x144.png
+title: Summer
+tagline: 'Delicious & healthy recipes'
+description: 'A simple Jekyll theme with a photo sidebar.'
+keywords: 'connor, bär, designer, traveller, code, jekyll, developer, theme'
+url: https://connor-baer.github.io
+baseurl: /summer
+assets: /assets
+images: /images/
+image: index-large.jpg
+logo: /assets/icons/apple-icon-144x144.png
 
 author:
-  name:               Connor Bär
-  bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
-  image:              author
-  url:                https://connorbaer.co
-  email:              hello@connorbaer.co
-  twitter:            connor_baer
+  name: Connor Bär
+  bio: Hi, I'm Connor, the author of this blog. Nice to meet you!
+  image: author
+  url: https://connorbaer.co
+  email: hello@connorbaer.co
+  twitter: connor_baer
 
 social:
-  twitter:            https://twitter.com/connor_baer
-  instagram:          https://instagram.com/connor_baer
-  github:             https://github.com/madebyconnor/summer
+  twitter: https://twitter.com/connor_baer
+  instagram: https://instagram.com/connor_baer
+  github: https://github.com/connor-baer/summer
 
-version:              2.0.0
+version: 2.0.0
 
 github:
-  repo:               https://github.com/madebyconnor/summer
-
+  repo: https://github.com/connor-baer/summer
 
 # Integrations
 # typekit:              fcv7rfe
 
 google_fonts:
-  Overpass:           400, 600, 800
+  Overpass: 400, 600, 800
 
 # google_analytics_key: UA-37412525-4
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
-
 
 # Content
 excerpt_separator: <!-- Read more -->
 
 navigation:
-  GitHub: https://github.com/madebyconnor/summer
-  Download: https://github.com/madebyconnor/summer/archive/gh-pages.zip
+  GitHub: https://github.com/connor-baer/summer
+  Download: https://github.com/connor-baer/summer/archive/gh-pages.zip
 
 collections:
   recipes:
