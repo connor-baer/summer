@@ -27,3 +27,7 @@ For a twist on gin & tonic, try these alcoholic ice lollies as a boozy grown-up 
 
 1. Take a six-hole lolly mould and push a cucumber slice and a mint leaf into each one. In a jug, stir the gin, tonic and sugar until the sugar dissolves and the tonic loses its fizz.
 2. Divide between the moulds, push in the lolly sticks and freeze for at least 4 hrs, or preferably overnight.
+
+---
+
+_From [BBC Good Food](https://www.bbcgoodfood.com/recipes/gin-tonic-lollies)._
