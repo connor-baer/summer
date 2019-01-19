@@ -1,5 +1,5 @@
 ---
-title: 'Lime, Physalis and Elderflower Caipiroska'
+title: 'Lime, physalis and elderflower caipiroska'
 ref: physalis-caipiroska
 image: true
 time: 10
@@ -29,12 +29,13 @@ ingredients:
 ---
 
 ## Equipment
- - 1 x Short Glass
- - 1 x Crushed ice
- - 1 x Jigger
- - 1 x Muddler
- - 1 x Chopping Board
- - 1 x Knife
+
+- 1 x Short Glass
+- 1 x Crushed ice
+- 1 x Jigger
+- 1 x Muddler
+- 1 x Chopping Board
+- 1 x Knife
 
 <figure>
   <img
@@ -50,4 +51,4 @@ ingredients:
 
 ---
 
-*From [Hot & Chilli](http://www.hotandchilli.com/2016/06/lime-physalis-and-elderflower.html).*
+_From [Hot & Chilli](http://www.hotandchilli.com/2016/06/lime-physalis-and-elderflower.html)._

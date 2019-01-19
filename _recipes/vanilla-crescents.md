@@ -1,5 +1,5 @@
 ---
-title: Vanilla Crescents
+title: Austrian vanilla crescents
 ref: vanilla-crescents
 image: true
 time: 60
@@ -43,7 +43,7 @@ ingredients:
 ---
 
 <figure>
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-1-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-1.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-1-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-1.jpg" alt="You can substitute almond flour for the ground walnuts.">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-1-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-1.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-1-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-1.jpeg" alt="You can substitute almond flour for the ground walnuts.">
   <figcaption>You can substitute almond flour for the ground walnuts.</figcaption>
 </figure>
 
@@ -53,14 +53,14 @@ ingredients:
 
 <div class="gallery gallery-3">
   <figure class="gallery-item">
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-2-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-2.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-2-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-2.jpg" alt="If the dough is too sticky to roll it out you can do that it a lightly floured surface.">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-2-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-2.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-2-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-2.jpeg" alt="If the dough is too sticky to roll it out you can do that it a lightly floured surface.">
   <figcaption>If the dough is too sticky to roll it out you can do that it a lightly floured surface.</figcaption>
 </figure>
   <figure class="gallery-item">
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-3-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-3.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-3-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-3.jpg">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-3-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-3.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-3-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-3.jpeg">
 </figure>
   <figure class="gallery-item">
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-4-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-4.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-4-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-4.jpg">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-4-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-4.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-4-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-4.jpeg">
 </figure>
 </div>
 
@@ -74,17 +74,17 @@ The coating for Vanillekipferl consists of powdered sugar mixed with vanilla sug
 
 <div class="gallery gallery-2">
   <figure class="gallery-item">
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-5-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-5.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-5-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-5.jpg">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-5-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-5.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-5-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-5.jpeg">
 </figure>
   <figure class="gallery-item">
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-6-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-6.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-6-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-6.jpg">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-6-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-6.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-6-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-6.jpeg">
 </figure>
 </div>
 
 1. Let them cool for 1 minute, then put several crescents in the prepared sugar-vanilla mixture, roll them around until cover in sugar and transfer to a plate. Be careful not to break them (because then you have to eat them immediately ;-) The sugar will stick best, when the cookies are still warm at the moment of rolling them. Also don't touch them for too long on the same spot as this will yield in Vanillekipferl with fingerprings. If you did so, you can always sprinkle them with additional sugar when finished or before serving.
 
 <figure>
-  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-7-large.jpg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-7.jpg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-7-small.jpg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-7.jpg">
+  <img srcset="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-7-large.jpeg 2000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-7.jpeg 1000w, {{ site.assets }}{{ site.images }}posts/vanilla-crescents-7-small.jpeg 500w" sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)" src="{{ site.assets }}{{ site.images }}posts/vanilla-crescents-7.jpeg">
 </figure>
 
 1. Now roll out your next batch of dough, but don't put the dough crescents on a warm baking sheet. I always arrange them onto a sheet of parchment paper with a big cutting board underneath and transfer the paper onto the sheet just before baking. Or you use 2 or 3 separate sheets for baking them, especially if you have some helpers (recommended!). When completely cool, store crescents in an airtight container or cookie box.
